@@ -3658,5 +3658,3 @@ a9d4ea81da28ee9c894bf9d45adc4cfa9d52fddc Flashing -> patterns documentation
 4edec48b74dbb9d571e927b69b24c30ec0624975 Added installation docs
 625eba4bb403296a8bbc1e72cc9cf4a5126f6c02 Heavily improved quickstart section.
 4aa76212d1be9b17a57249549c2a73fb10b6cda8 Updated documentation.  Starting to look pretty good
-3b36bef2e6165bb4dad73d17f23ee1879e99f497 Improved documentation, added a contextmanager for request binding
-44b42e0fbd93d86e0f4e929bda8e5fb63e81035d Added a README file for MiniTwit.
