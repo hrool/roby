@@ -21,10 +21,11 @@ rsync -arv --exclude=".git" --exclude="README.rst"  --exclude="README.md"  ./ ..
 cd ..
 echo "delete remote git"
 rm -rf flask
+rm -rf src/flask
 mv src/flask src/roby
+echo ${cert_git_id} >> bot.used
 echo "git add ."
 git add *
 echo "commit and push"
 git commit -m "${cert_git_info}"
 git push -u origin
-echo ${cert_git_id} >> bot.used
