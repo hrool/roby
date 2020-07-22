@@ -23,6 +23,7 @@ echo "delete remote git"
 rm -rf flask
 rm -rf src/flask
 mv src/flask src/roby
+mv flask.py roby.py
 echo ${cert_git_id} >> bot.used
 echo "git add ."
 git add *
