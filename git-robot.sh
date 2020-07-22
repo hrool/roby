@@ -1,6 +1,9 @@
 #!/bin/bash
 
 source /etc/profile
+cd /root/roby
+# 随机等待
+sleep $RANDOM
 git clone https://github.com/pallets/flask.git
 cd flask
 git log --pretty=format:"%H %s" | grep -v -i 'flask' > ../bot.log
