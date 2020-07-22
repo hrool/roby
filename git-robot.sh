@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source /etc/profile
 git clone https://github.com/pallets/flask.git
 cd flask
 git log --pretty=format:"%H %s" | grep -v -i 'flask' > ../bot.log
