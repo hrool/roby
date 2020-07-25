@@ -1,3 +1,11 @@
+21c3df31de4bc2f838c945bd37d185210d9bab1a Merge pull request #3594 from jackwardell/consolidating-error-pages-docs
+59b0b85835fa925e67f9a3f5173f7d6b6e67a411 consolidate error handling docs
+165f059a731cd8346cfea9a44045d75c27219ca9 Merge pull request #3695 from pallets/dependabot/pip/tox-3.18.0
+eb96acec46a74c03b88327c503d0352d6da4a107 Bump tox from 3.17.1 to 3.18.0
+2fa8eb3cfebd7d797f8d27bfd05ea5f63985665f Merge pull request #3684 from MLH-Fellowship/3628-duplicate-headers
+7b09a0904c32dc8784cdd68e842442057340a361 change make_response to use headers.update
+6f2fdc5ac4ad869a21c4c0281d7fa1eb8aa5a689 Merge pull request #3694 from pallets/disable-lowest
+19a0db6d14722aeb6dd711efeafa72fcbc2562e1 remove lowest version test until next release
 f32f19162c936d94fb88f28f17f43dd9f195792b Merge pull request #3691 from greyli/update-discord-links
 1580aa30cb77c1db119c5c71b88795141d0a5045 Update Discord invite links
 a40c381ffdc4c28a19a0910c4da8ec54e3ae63cf Merge pull request #3560 from greyli/fix-env-chdir
@@ -3655,5 +3663,3 @@ df929c6c77ea5490a969275e45075c29711a498c further improved documentation
 7d6b8e9ab3e738d69e39ad53a7c0f6a552d5284a Documented non-decorator uses of registation.
 a9d4ea81da28ee9c894bf9d45adc4cfa9d52fddc Flashing -> patterns documentation
 727c701686c18c4a27ca523eb0c5862d497be24e And finished documentation for most parts.
-4edec48b74dbb9d571e927b69b24c30ec0624975 Added installation docs
-625eba4bb403296a8bbc1e72cc9cf4a5126f6c02 Heavily improved quickstart section.

@@ -1,3 +1,5 @@
+.. _quickstart:
+
 Quickstart
 ==========
 
@@ -148,6 +150,22 @@ don't have to deal with that.  It will also make sure that ``HEAD``
 requests are handled like the RFC demands, so you can completely ignore
 that part of the HTTP specification.
 
+Static Files
+------------
+
+Dynamic web applications need static files as well.  That's usually where
+the CSS and JavaScript files are coming from.  Ideally your web server is
+configured to serve them for you, but during development Flask can do that
+as well.  Just create a folder called `static` in your package or next to
+your module and it will be available at `/static` on the application.
+
+To generate URLs to that part of the URL, use the special ``'static'`` URL
+name::
+
+    url_for('static', filename='style.css')
+
+The file has to be stored on the filesystem as ``static/style.css``.
+
 Rendering Templates
 -------------------
 
@@ -204,6 +222,11 @@ Here an example template:
 Inside templates you also have access to the :class:`~flask.request`,
 :class:`~flask.session` and :class:`~flask.g` objects as well as the
 :func:`~flask.get_flashed_messages` function.
+
+Templates are especially useful if inheritance is used.  If you want to
+know how that works, head over to the :ref:`template-inheritance` pattern
+documentation.  Basically template inheritance makes it possible to keep
+certain elements on each page (like header, navigation and footer).
 
 Automatic escaping is enabled, so if name contains HTML it will be escaped
 automatically.  If you can trust a variable and you know that it will be
@@ -466,71 +489,7 @@ possible to record a message at the end of a request and access it next
 request and only next request.  This is usually combined with a layout
 template that does this.
 
-So here a full example::
-
-    from flask import flash, redirect, url_for, render_template
-
-    @app.route('/')
-    def index():
-        return render_template('index.html')
-
-    @app.route('/login', methods=['GET', 'POST'])
-    def login():
-        error = None
-        if request.method == 'POST':
-            if request.form['username'] != 'admin' or \
-               request.form['password'] != 'secret':
-                error = 'Invalid credentials'
-            else:
-                flash('You were sucessfully logged in')
-                return redirect(url_for('index'))
-        return render_template('login.html', error=error)
-
-And here the ``layout.html`` template which does the magic:
-
-.. sourcecode:: html+jinja
-
-   <!doctype html>
-   <title>My Application</title>
-   {% with messages = get_flashed_messages() %}
-     {% if messages %}
-       <ul class=flashes>
-       {% for message in messages %}
-         <li>{{ message }}</li>
-       {% endfor %}
-       </ul>
-     {% endif %}
-   {% endwith %}
-   {% block body %}{% endblock %}
-
-And here the index.html template:
-
-.. sourcecode:: html+jinja
-
-   {% extends "layout.html" %}
-   {% block body %}
-     <h1>Overview</h1>
-     <p>Do you want to <a href="{{ url_for('login') }}">log in?</a>
-   {% endblock %}
-
-And of course the login template:
-
-.. sourcecode:: html+jinja
-
-   {% extends "layout.html" %}
-   {% block body %}
-     <h1>Login</h1>
-     {% if error %}
-       <p class=error><strong>Error:</strong> {{ error }}
-     {% endif %}
-     <form action="" method=post>
-       <dl>
-         <dt>Username:
-         <dd><input type=text name=username value="{{
-             request.form.username }}">
-         <dt>Password:
-         <dd><input type=password name=password>
-       </dl>
-       <p><input type=submit value=Login>
-     </form>
-   {% endblock %}
+To flash a message use the :func:`~flask.flash` method, to get hold of the
+messages you can use :func:`~flask.get_flashed_messages` which is also
+available in the templates.  Check out the :ref:`message-flashing-pattern`
+for a full example.
