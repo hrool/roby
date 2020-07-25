@@ -3661,5 +3661,3 @@ df929c6c77ea5490a969275e45075c29711a498c further improved documentation
 9dfab582d065521e9350327801ed2c5ced1c8fa1 Updated README
 3d719f35f5c1ee4ce3dc01fb2167ef49c0180cf6 Added docs, fixed some bugs I introduced last commit
 7d6b8e9ab3e738d69e39ad53a7c0f6a552d5284a Documented non-decorator uses of registation.
-a9d4ea81da28ee9c894bf9d45adc4cfa9d52fddc Flashing -> patterns documentation
-727c701686c18c4a27ca523eb0c5862d497be24e And finished documentation for most parts.
