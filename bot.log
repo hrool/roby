@@ -1,3 +1,7 @@
+f31a8ce4bc1cc5e189b76041714548fe43e04964 Merge pull request #3704 from jackwardell/no-self-required
+daf9ec790a14e556049df36904ebc86c45f85b7b swapping self.assert_equal for assert
+a3d423e5ec5c1389c354a546c05c1ca09a03e3d0 Merge pull request #3702 from pallets/dependabot/pip/pip-tools-5.3.0
+3f8ff0d181f0979a467676287f148afd8ee187d3 Bump pip-tools from 5.2.1 to 5.3.0
 21c3df31de4bc2f838c945bd37d185210d9bab1a Merge pull request #3594 from jackwardell/consolidating-error-pages-docs
 59b0b85835fa925e67f9a3f5173f7d6b6e67a411 consolidate error handling docs
 165f059a731cd8346cfea9a44045d75c27219ca9 Merge pull request #3695 from pallets/dependabot/pip/tox-3.18.0
@@ -3660,4 +3664,3 @@ df929c6c77ea5490a969275e45075c29711a498c further improved documentation
 8e9bd5f009bb8756a2a7d76a4b792323eeee49d6 Fixed a typo
 9dfab582d065521e9350327801ed2c5ced1c8fa1 Updated README
 3d719f35f5c1ee4ce3dc01fb2167ef49c0180cf6 Added docs, fixed some bugs I introduced last commit
-7d6b8e9ab3e738d69e39ad53a7c0f6a552d5284a Documented non-decorator uses of registation.
