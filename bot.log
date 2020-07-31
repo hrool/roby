@@ -1,7 +1,24 @@
+216d97c21abe9674fe1dd6364b64051b0d09d0b0 Merge pull request #3713 from pallets/dependabot/pip/pytest-6.0.1
+ce7ee648b39c9dff05df53d1d007f50c2f146a39 Bump pytest from 6.0.0 to 6.0.1
+6638432457320fd2db9c74b9135afef370ed96f0 Merge pull request #3711 from pallets/cli-loading-error
+253570784cdcc85d82142128ce33e3b9d8f8db14 cleaner message when CLI can't load app
+fd0a6084498e9d1990ddcf96366e8ac27b63428a Merge pull request #3706 from pallets/dependabot/pip/tox-3.18.1
+2a388c4dc00f8bb44b7a557a85ca97f8a913bbac Bump tox from 3.18.0 to 3.18.1
+fc0aa7ac978b56e83dccde94214b1900a2ee1c3f Merge pull request #3705 from pallets/dependabot/pip/pytest-6.0.0
+6ff7004db01d0dc3ddbcc943ea727cb1811ba1aa Bump pytest from 5.4.3 to 6.0.0
+37551e6798aabefd549340a7d3840b7648b413c7 Merge pull request #3699 from MartinThoma/style
+36e6fc8ab8418d7d8ead6ed0196b2bcbbc9e91ba Merge pull request #3669 from ebonnecab/error-docs
+89d1487b2ed0eb4fc4fb49a50eb54b942bec4193 rewrite debugging docs, move to separate page
+d25ee22e34a7682f3f0823b749597bd1dc28441a reduce section on http status codes
+ba118b4543bbc87cdb9dbe8297029ddddfe8958f adjust header levels and spacing
+2db3c9a72e446eac980451ef688d87b4fd32cad4 rewrite external debuggers section
+0db95259db5b310c8c4ac9b97ca2b6ae075c06e5 normalize sentence spacing
 f31a8ce4bc1cc5e189b76041714548fe43e04964 Merge pull request #3704 from jackwardell/no-self-required
 daf9ec790a14e556049df36904ebc86c45f85b7b swapping self.assert_equal for assert
 a3d423e5ec5c1389c354a546c05c1ca09a03e3d0 Merge pull request #3702 from pallets/dependabot/pip/pip-tools-5.3.0
 3f8ff0d181f0979a467676287f148afd8ee187d3 Bump pip-tools from 5.2.1 to 5.3.0
+75a9b7465003205981b97fd4a133b07d7c330167 DOC: Remove unnecessary docstrings
+569c88d72102e502d71c07193182adb1769ee936 more changes to consolidated error handling docs
 21c3df31de4bc2f838c945bd37d185210d9bab1a Merge pull request #3594 from jackwardell/consolidating-error-pages-docs
 59b0b85835fa925e67f9a3f5173f7d6b6e67a411 consolidate error handling docs
 165f059a731cd8346cfea9a44045d75c27219ca9 Merge pull request #3695 from pallets/dependabot/pip/tox-3.18.0
@@ -3661,6 +3678,3 @@ df929c6c77ea5490a969275e45075c29711a498c further improved documentation
 1fff3e598126a084348ec2c112fdd3bc6b9a1ee0 Fixed a doc display bug and setup.py workaround for dev version.
 05f36c7f7e2df36ee28f90d99632162579b1287c Heavily improved documentation
 4e1b3e1134eb478563bc434d794085d0a412cb84 set secret key :)
-8e9bd5f009bb8756a2a7d76a4b792323eeee49d6 Fixed a typo
-9dfab582d065521e9350327801ed2c5ced1c8fa1 Updated README
-3d719f35f5c1ee4ce3dc01fb2167ef49c0180cf6 Added docs, fixed some bugs I introduced last commit
