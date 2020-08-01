@@ -3677,4 +3677,3 @@ df929c6c77ea5490a969275e45075c29711a498c further improved documentation
 574e81f9c8bbdc41958e1e7a7613633b091101f8 Fixed a bug in setup.py
 1fff3e598126a084348ec2c112fdd3bc6b9a1ee0 Fixed a doc display bug and setup.py workaround for dev version.
 05f36c7f7e2df36ee28f90d99632162579b1287c Heavily improved documentation
-4e1b3e1134eb478563bc434d794085d0a412cb84 set secret key :)
