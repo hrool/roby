@@ -1,3 +1,5 @@
+eb865f8c24572065a4f1c7ec8316e0d9d0eab381 Merge pull request #3716 from pallets/dependabot/pip/pip-tools-5.3.1
+045abd6c04cbb8b08aa1e41f90a5077ac97fee3d Bump pip-tools from 5.3.0 to 5.3.1
 216d97c21abe9674fe1dd6364b64051b0d09d0b0 Merge pull request #3713 from pallets/dependabot/pip/pytest-6.0.1
 ce7ee648b39c9dff05df53d1d007f50c2f146a39 Bump pytest from 6.0.0 to 6.0.1
 6638432457320fd2db9c74b9135afef370ed96f0 Merge pull request #3711 from pallets/cli-loading-error
@@ -3674,6 +3676,3 @@ d78b04a3fca8d8887382606897d4a97e55062fda Footnotes are 100% in width
 85ca089dde8814c4a42ad4574cddce25d60e5e25 might -> must
 8171da88a49eba769d313a51591ee8575be59762 Described HTTP methods
 df929c6c77ea5490a969275e45075c29711a498c further improved documentation
-574e81f9c8bbdc41958e1e7a7613633b091101f8 Fixed a bug in setup.py
-1fff3e598126a084348ec2c112fdd3bc6b9a1ee0 Fixed a doc display bug and setup.py workaround for dev version.
-05f36c7f7e2df36ee28f90d99632162579b1287c Heavily improved documentation

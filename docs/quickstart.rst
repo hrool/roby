@@ -52,6 +52,30 @@ So what did that code do?
    makes sure the server only runs if the script is executed directly from
    the Python interpreter and not used as imported module.
 
+To stop the server, hit control-C.
+
+
+Debug Mode
+----------
+
+Now that :meth:`~flask.Flask.run` method is nice to start a local
+development server, but you would have to restart it manually after each
+change you do to code.  That is not very nice and Flask can do better.  If
+you enable the debug support the server will reload itself on code changes
+and also provide you with a helpful debugger if things go wrong.
+
+There are two ways to enable debugging.  Either set that flag on the
+applciation object::
+
+    app.debug = True
+    app.run()
+
+Or pass it to run::
+
+    app.run(debug=True)
+
+Both will have exactly the same effect.
+
 
 Routing
 -------
@@ -137,6 +161,18 @@ explained below.  It basically tells flask to think we are handling a
 request even though we are not, we are in an interactive Python shell.
 Have a look at the explanation below. :ref:`context-locals`).
 
+Why would you want to build URLs instead of hardcoding them in your
+templates?  There are three good reasons for this:
+
+1. reversing is often more descriptive than hardcoding the URLs.  Also and
+   more importantly you can change URLs in one go without having to change
+   the URLs all over the place.
+2. URL building will handle escaping of special characters and unicode
+   data transparently for you, you don't have to deal with that.
+3. If your application is placed outside the URL root (so say in
+   ``/myapplication`` instead of ``/``), :func:`~flask.url_for` will
+   handle that properly for you.
+
 
 HTTP Methods
 ````````````
@@ -157,6 +193,52 @@ If ``GET`` is present, ``HEAD`` will be added automatically for you.  You
 don't have to deal with that.  It will also make sure that ``HEAD``
 requests are handled like the RFC demands, so you can completely ignore
 that part of the HTTP specification.
+
+You have no idea what an HTTP method is?  Worry not, here quick
+introduction in HTTP methods and why they matter:
+
+The HTTP method (also often called "the verb") tells the server what the
+clients wants to *do* with the requested page.  The following methods are
+very common:
+
+`GET`
+    The Browser tells the server: just *get* me the information stored on
+    that page and send them to me.  This is probably the most common
+    method.
+
+`HEAD`
+    The Browser tells the server: get me the information, but I am only
+    interested in the *headers*, not the content of the page.  An
+    application is supposed to handle that as if a `GET` request was
+    received but not deliver the actual contents.  In Flask you don't have
+    to deal with that at all, the underlying Werkzeug library handles that
+    for you.
+
+`POST`
+    The browser tells the server that it wants to *post* some new
+    information to that URL and that the server must ensure the data is
+    stored and only stored once.  This is how HTML forms are usually
+    transmitting data to the server.
+
+`PUT`
+    Similar to `POST` but the server might trigger the store procedure
+    multiple times by overwriting the old values more than once.  Now you
+    might be asking why this is any useful, but there are some good
+    reasons to do that.  Consider the connection is lost during
+    transmission, in that situation a system between the browser and the
+    server might sent the request safely a second time without breaking
+    things.  With `POST` that would not be possible because it must only
+    be triggered once.
+
+`DELETE`
+    Remove the information that the given location.
+
+Now the interesting part is that in HTML4 and XHTML1, the only methods a
+form might submit to the server are `GET` and `POST`.  But with JavaScript
+and future HTML standards you can use other methods as well.  Furthermore
+HTTP became quite popular lately and there are more things than browsers
+that are speaking HTTP.  (Your revision control system for instance might
+speak HTTP)
 
 Static Files
 ------------
