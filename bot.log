@@ -1,3 +1,7 @@
+5bf8cc225f1e7f7efb2e8aa1f8e2c11190c1e5f8 Merge pull request #3722 from pallets/dependabot/pip/tox-3.19.0
+7eeb0c8d220f21fa08414f7726005b7c441a18a1 Bump tox from 3.18.1 to 3.19.0
+fd0f89ebf3ef44fd40372db48f25009bdad6d162 Merge pull request #3723 from greyli/fix-intersphinx-link
+414b30b2ec8ae365ca311b697d44578394371ff6 Fix bad intersphinx link
 eb865f8c24572065a4f1c7ec8316e0d9d0eab381 Merge pull request #3716 from pallets/dependabot/pip/pip-tools-5.3.1
 045abd6c04cbb8b08aa1e41f90a5077ac97fee3d Bump pip-tools from 5.3.0 to 5.3.1
 216d97c21abe9674fe1dd6364b64051b0d09d0b0 Merge pull request #3713 from pallets/dependabot/pip/pytest-6.0.1
@@ -3673,6 +3677,3 @@ ef524f2cfd65377b3b9ce896e7a710472b13c0f6 No need for the closing import
 d78b04a3fca8d8887382606897d4a97e55062fda Footnotes are 100% in width
 4671429a509094f36e2294055340197091d39979 Added a security section to the foreword and a footnote to the g variable
 4e7aa9e7f7a86ee0ea4b6801694c13151518cb52 Linked HTTP
-85ca089dde8814c4a42ad4574cddce25d60e5e25 might -> must
-8171da88a49eba769d313a51591ee8575be59762 Described HTTP methods
-df929c6c77ea5490a969275e45075c29711a498c further improved documentation
