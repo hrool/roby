@@ -1,3 +1,5 @@
+1a9059dd3a0c1a8574f6555e92f3ec3c596284f5 Merge pull request #3725 from pallets/dependabot/pip/sphinx-3.2.0
+1a6621ed840994b9600f12dde3bcb898c858889d Bump sphinx from 3.1.2 to 3.2.0
 5bf8cc225f1e7f7efb2e8aa1f8e2c11190c1e5f8 Merge pull request #3722 from pallets/dependabot/pip/tox-3.19.0
 7eeb0c8d220f21fa08414f7726005b7c441a18a1 Bump tox from 3.18.1 to 3.19.0
 fd0f89ebf3ef44fd40372db48f25009bdad6d162 Merge pull request #3723 from greyli/fix-intersphinx-link
@@ -3676,4 +3678,3 @@ ef524f2cfd65377b3b9ce896e7a710472b13c0f6 No need for the closing import
 6a3a046f55755f0691568431e68a8bfea8d89df0 Another doc improvement
 d78b04a3fca8d8887382606897d4a97e55062fda Footnotes are 100% in width
 4671429a509094f36e2294055340197091d39979 Added a security section to the foreword and a footnote to the g variable
-4e7aa9e7f7a86ee0ea4b6801694c13151518cb52 Linked HTTP
