@@ -3676,5 +3676,3 @@ ef524f2cfd65377b3b9ce896e7a710472b13c0f6 No need for the closing import
 03168a5d53457fdb8676a4ac9fca0f76a23c6852 Removed the useless apishowcase example
 0b8e01b4450d0ba8cb65751d866568fddc155fa4 Linked escape
 6a3a046f55755f0691568431e68a8bfea8d89df0 Another doc improvement
-d78b04a3fca8d8887382606897d4a97e55062fda Footnotes are 100% in width
-4671429a509094f36e2294055340197091d39979 Added a security section to the foreword and a footnote to the g variable
