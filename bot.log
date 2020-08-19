@@ -1,3 +1,5 @@
+e071734b4e9f5c21fe65400b167ff327c6c1f7bc Merge pull request #3734 from pallets/dependabot/pip/sphinx-3.2.1
+7be45a4c5bb557cde56efac0cb85e0a9120acc37 Bump sphinx from 3.2.0 to 3.2.1
 1a9059dd3a0c1a8574f6555e92f3ec3c596284f5 Merge pull request #3725 from pallets/dependabot/pip/sphinx-3.2.0
 1a6621ed840994b9600f12dde3bcb898c858889d Bump sphinx from 3.1.2 to 3.2.0
 5bf8cc225f1e7f7efb2e8aa1f8e2c11190c1e5f8 Merge pull request #3722 from pallets/dependabot/pip/tox-3.19.0
@@ -3672,5 +3674,3 @@ a01e8b49ca66608f0bd46134ff02deeb5724c799 Fixed a documentation error and impleme
 51c9829a9cdfa2bf301431f686d7a404cc7c5083 Fixed couple of errors in docs.
 2f5a4f8dbc832b0daebcd66ea8b3969589191fa7 Doc updates and typo fixes
 03148dba6b26a2694da1d466584f50189c52e7b3 Added testing documentation
-ef524f2cfd65377b3b9ce896e7a710472b13c0f6 No need for the closing import
-03168a5d53457fdb8676a4ac9fca0f76a23c6852 Removed the useless apishowcase example
