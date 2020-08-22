@@ -3673,4 +3673,3 @@ ca520fb7e4c29afccc637e61c11429a0f3e8d5ad Static files are active in the WSGI app
 a01e8b49ca66608f0bd46134ff02deeb5724c799 Fixed a documentation error and implemented template context processors.
 51c9829a9cdfa2bf301431f686d7a404cc7c5083 Fixed couple of errors in docs.
 2f5a4f8dbc832b0daebcd66ea8b3969589191fa7 Doc updates and typo fixes
-03148dba6b26a2694da1d466584f50189c52e7b3 Added testing documentation
