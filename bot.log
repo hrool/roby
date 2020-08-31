@@ -1,3 +1,4 @@
+a1fb8f143f5deb545a10ac2758cb7a2b2bd68df3 update cache action to v2 (#3749)
 6d3f87ee071ea061f0af2ba7d29b148841090b59 Merge pull request #3742 from pallets/dependabot/pip/pre-commit-2.7.1
 0885e68beb2ec2ba39a4ec1fb4097d082644e228 Bump pre-commit from 2.6.0 to 2.7.1
 fe55f92cdc575d00204a134b2d556c1053e1ed4e Fix pre-commit cache key in GitHub Actions. (#3740)
@@ -3673,4 +3674,3 @@ c4f5c2fb9afc1679c085500830bd53fab93ad885 Fixed a typo
 fc94599285aa1aec50b3c9426697249e55edda0a Removed useless imports and added README
 ca520fb7e4c29afccc637e61c11429a0f3e8d5ad Static files are active in the WSGI app now, not just the server.
 8009bd986940378bba1399dbfce90d03e441467b Fixed the mod_wsgi docs. Thanks Graham
-4affedec356ad8c9e6a107578f03fc7f5c615064 Testing URL generation
