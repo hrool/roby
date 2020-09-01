@@ -3671,6 +3671,3 @@ fb2d2e446bdd806ea3de7b869c7371e2dae57a23 request_init -> before_request and requ
 1246f4088a4fdc00a79f8029ff5d77bfe4fc9b14 First part of the tutorial.  Many explanations missing but it's a start.
 c4f5c2fb9afc1679c085500830bd53fab93ad885 Fixed a typo
 1d8432ebfd1637eacab79a15e9b7963bf061371c Can't believe I forgot that future import.
-fc94599285aa1aec50b3c9426697249e55edda0a Removed useless imports and added README
-ca520fb7e4c29afccc637e61c11429a0f3e8d5ad Static files are active in the WSGI app now, not just the server.
-8009bd986940378bba1399dbfce90d03e441467b Fixed the mod_wsgi docs. Thanks Graham
