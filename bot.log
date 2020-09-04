@@ -3668,6 +3668,3 @@ b608785801ce819037cb6cca04c70fd398519c08 Recentered README
 fb2d2e446bdd806ea3de7b869c7371e2dae57a23 request_init -> before_request and request_shutdown -> after_request
 7b5015010bc8c2a2d56c7c50b37e5b9facdad102 Preserve the request context in debug mode.
 6dd92ae4b32c336564231e10db12458a8b9261ca Beefed up the tutorial
-1246f4088a4fdc00a79f8029ff5d77bfe4fc9b14 First part of the tutorial.  Many explanations missing but it's a start.
-c4f5c2fb9afc1679c085500830bd53fab93ad885 Fixed a typo
-1d8432ebfd1637eacab79a15e9b7963bf061371c Can't believe I forgot that future import.
