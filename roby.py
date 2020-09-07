@@ -14,7 +14,6 @@ import os
 import sys
 
 from threading import local
-from contextlib import contextmanager
 from jinja2 import Environment, PackageLoader, FileSystemLoader
 from werkzeug import Request as RequestBase, Response as ResponseBase, \
      LocalStack, LocalProxy, create_environ, cached_property, \
@@ -83,6 +82,16 @@ class _RequestContext(object):
         self.session = app.open_session(self.request)
         self.g = _RequestGlobals()
         self.flashes = None
+
+    def __enter__(self):
+        _request_ctx_stack.push(self)
+
+    def __exit__(self, exc_type, exc_value, tb):
+        # do not pop the request stack if we are in debug mode and an
+        # exception happened.  This will allow the debugger to still
+        # access the request object in the interactive shell.
+        if tb is None or not self.app.debug:
+            _request_ctx_stack.pop()
 
 
 def url_for(endpoint, **values):
@@ -153,6 +162,14 @@ def _default_template_ctx_processor():
     )
 
 
+def _get_package_path(name):
+    """Returns the path to a package or cwd if that cannot be found."""
+    try:
+        return os.path.abspath(os.path.dirname(sys.modules[name].__file__))
+    except (KeyError, AttributeError):
+        return os.getcwd()
+
+
 class Flask(object):
     """The flask object implements a WSGI application and acts as the central
     object.  It is passed the name of the module or package of the
@@ -213,8 +230,7 @@ class Flask(object):
         self.package_name = package_name
 
         #: where is the app root located?
-        self.root_path = os.path.abspath(os.path.dirname(
-            sys.modules[self.package_name].__file__))
+        self.root_path = _get_package_path(self.package_name)
 
         #: a dictionary of all view functions registered.  The keys will
         #: be function names which are also used to generate URLs and
@@ -233,16 +249,16 @@ class Flask(object):
         #: of the request before request dispatching kicks in.  This
         #: can for example be used to open database connections or
         #: getting hold of the currently logged in user.
-        #: To register a function here, use the :meth:`request_init`
+        #: To register a function here, use the :meth:`before_request`
         #: decorator.
-        self.request_init_funcs = []
+        self.before_request_funcs = []
 
         #: a list of functions that are called at the end of the
         #: request.  Tha function is passed the current response
         #: object and modify it in place or replace it.
-        #: To register a function here use the :meth:`request_shtdown`
+        #: To register a function here use the :meth:`after_request`
         #: decorator.
-        self.request_shutdown_funcs = []
+        self.after_request_funcs = []
 
         #: a list of functions that are called without arguments
         #: to populate the template context.  Each returns a dictionary
@@ -493,14 +509,14 @@ class Flask(object):
             return f
         return decorator
 
-    def request_init(self, f):
+    def before_request(self, f):
         """Registers a function to run before each request."""
-        self.request_init_funcs.append(f)
+        self.before_request_funcs.append(f)
         return f
 
-    def request_shutdown(self, f):
+    def after_request(self, f):
         """Register a function to be run after each request."""
-        self.request_shutdown_funcs.append(f)
+        self.after_request_funcs.append(f)
         return f
 
     def context_processor(self, f):
@@ -567,19 +583,20 @@ class Flask(object):
 
     def preprocess_request(self):
         """Called before the actual request dispatching and will
-        call every as :func:`request_init` decorated function.
+        call every as :meth:`before_request` decorated function.
         If any of these function returns a value it's handled as
         if it was the return value from the view and further
         request handling is stopped.
         """
-        for func in self.request_init_funcs:
+        for func in self.before_request_funcs:
             rv = func()
             if rv is not None:
                 return rv
 
     def process_response(self, response):
         """Can be overridden in order to modify the response object
-        before it's sent to the WSGI server.
+        before it's sent to the WSGI server.  By default this will
+        call all the :meth:`after_request` decorated functions.
 
         :param response: a :attr:`response_class` object.
         :return: a new response object or the same, has to be an
@@ -588,7 +605,7 @@ class Flask(object):
         session = _request_ctx_stack.top.session
         if session is not None:
             self.save_session(session, response)
-        for handler in self.request_shutdown_funcs:
+        for handler in self.after_request_funcs:
             response = handler(response)
         return response
 
@@ -611,7 +628,6 @@ class Flask(object):
             response = self.process_response(response)
             return response(environ, start_response)
 
-    @contextmanager
     def request_context(self, environ):
         """Creates a request context from the given environment and binds
         it to the current context.  This must be used in combination with
@@ -625,11 +641,7 @@ class Flask(object):
 
         :params environ: a WSGI environment
         """
-        _request_ctx_stack.push(_RequestContext(self, environ))
-        try:
-            yield
-        finally:
-            _request_ctx_stack.pop()
+        return _RequestContext(self, environ)
 
     def test_request_context(self, *args, **kwargs):
         """Creates a WSGI environment from the given values (see
