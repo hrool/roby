@@ -3666,6 +3666,3 @@ f769e15fecf6e06c190133d85a3de6b703e4d1a1 Added website sources
 f54c4fd04f326d94684c7fcbf12df5cecae653c4 Fixed wording for circular imports
 61d07b8be9beae54d1c367adfc845dcf30a1512a Added note about decorators to becomingbig.
 b608785801ce819037cb6cca04c70fd398519c08 Recentered README
-26f86b1d4954dd7512684130ee803b42eca8d72e Restructured documentation a bit.
-fb2d2e446bdd806ea3de7b869c7371e2dae57a23 request_init -> before_request and request_shutdown -> after_request
-7b5015010bc8c2a2d56c7c50b37e5b9facdad102 Preserve the request context in debug mode.
