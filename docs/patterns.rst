@@ -195,7 +195,7 @@ SQLAlchemy in Flask
 
 Many people prefer `SQLAlchemy`_ for database access.  In this case it's
 encouraged to use a package instead of a module for your flask application
-and drop the modules into a separate module (:ref:`larger-applications`).
+and drop the models into a separate module (:ref:`larger-applications`).
 Although that is not necessary but makes a lot of sense.
 
 There are three very common ways to use SQLAlchemy.  I will outline each
@@ -225,10 +225,14 @@ Here the example `database.py` module for your application::
     def init_db():
         Base.metadata.create_all(bind=engine)
 
-To define your models, subclass the `Base` class the above code generated.
+To define your models, just subclass the `Base` class that was created by
+the code above.  If you are wondering why we don't have to care about
+threads here (like we did in the SQLite3 example above with the
+:data:`~flask.g` object): that's because SQLAlchemy does that for us
+already with the :class:`~sqlalchemy.orm.scoped_session`.
 
 To use SQLAlchemy in a declarative way with your application, you just
-have to put the following code into your application module  Flask will
+have to put the following code into your application module.  Flask will
 automatically remove database sessions at the end of the request for you::
 
     from yourapplication.database import db_session
@@ -274,6 +278,16 @@ Querying is simple as well:
 .. _SQLAlchemy: http://www.sqlalchemy.org/
 .. _declarative:
    http://www.sqlalchemy.org/docs/reference/ext/declarative.html
+
+Manual Object Relational Mapping
+--------------------------------
+
+*coming soon*
+
+SQL Abstraction Layer
+---------------------
+
+*coming soon*
 
 
 .. _template-inheritance:

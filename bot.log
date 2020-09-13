@@ -3663,6 +3663,3 @@ f769e15fecf6e06c190133d85a3de6b703e4d1a1 Added website sources
 6d556acb3fcaa6eeff4bda8cf704ad5f0cf5b5ac added coming soon to parts of the docs, linked scoped_session
 7c9303b7502403c372171e1e045433b57259a56b More typo fixes
 6418551efb1d24320c261b1e24c186d5394e6dcf More typo fixes
-f54c4fd04f326d94684c7fcbf12df5cecae653c4 Fixed wording for circular imports
-61d07b8be9beae54d1c367adfc845dcf30a1512a Added note about decorators to becomingbig.
-b608785801ce819037cb6cca04c70fd398519c08 Recentered README
