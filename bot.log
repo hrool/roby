@@ -1,3 +1,6 @@
+de464c03e134127140e5622e230790806a133ff9 Correct Sentry advertisement (not Free Software) (#3758)
+e0d7d402e188f6b70f0cfe157a265550479afa5a Merge pull request #3756 from pallets/dependabot/pip/pytest-6.0.2
+ad10d12177c99fbe0f3e07c92efc492b0171fd1c Bump pytest from 6.0.1 to 6.0.2
 baaf8642373bdc4c99a6cf6a2c54cfbb03b203ab Merge pull request #3754 from pallets/dependabot/pip/tox-3.20.0
 983af125acfd26779521b3bd0c08842e935df1de Bump tox from 3.19.0 to 3.20.0
 a1fb8f143f5deb545a10ac2758cb7a2b2bd68df3 update cache action to v2 (#3749)
@@ -3660,6 +3663,3 @@ aae5de730113e843864c120cc0453efc0a90b49f -x on files
 f769e15fecf6e06c190133d85a3de6b703e4d1a1 Added website sources
 855e7e9327c0095f39b34bd56b08aa63c87f9dfd Added license file
 5348eff4457a528cd605bbbd5e0152c282819962 fixed headers
-6d556acb3fcaa6eeff4bda8cf704ad5f0cf5b5ac added coming soon to parts of the docs, linked scoped_session
-7c9303b7502403c372171e1e045433b57259a56b More typo fixes
-6418551efb1d24320c261b1e24c186d5394e6dcf More typo fixes
