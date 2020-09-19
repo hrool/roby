@@ -3660,6 +3660,3 @@ b9cae3564ad31876d977c24a09d760e77ca992f3 Reordered deployment docs
 8605cc310d260c3b08160881b09da26c2cc95f8d ignore dist folder
 0bb8b4f9a1c61fcf473e5ca7a10cc3ed4f30766f Beefed up setup.py
 aae5de730113e843864c120cc0453efc0a90b49f -x on files
-f769e15fecf6e06c190133d85a3de6b703e4d1a1 Added website sources
-855e7e9327c0095f39b34bd56b08aa63c87f9dfd Added license file
-5348eff4457a528cd605bbbd5e0152c282819962 fixed headers
