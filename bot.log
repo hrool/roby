@@ -3657,4 +3657,3 @@ b9cae3564ad31876d977c24a09d760e77ca992f3 Reordered deployment docs
 5310fc38227b1907cb541f4a30ea8dfef46c2e19 Session falls back to a dummy object now if secret_key is missing.
 791cdb28f593d4d7649d88407fcd193834512219 Fixed capitalization on website
 9fbf9a062c11904b5022a5aa7941449e31340c32 head is 0.2-dev
-8605cc310d260c3b08160881b09da26c2cc95f8d ignore dist folder
