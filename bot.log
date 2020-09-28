@@ -1,3 +1,5 @@
+7e312c421ee1ccd57a6f1a5c43a00e8e4ec6a7d9 aesthetic: add a space after a comma (#3771)
+598c56c4983b33cbd9178f28516ebee33dd10fdd fix grammar (#3769)
 de464c03e134127140e5622e230790806a133ff9 Correct Sentry advertisement (not Free Software) (#3758)
 e0d7d402e188f6b70f0cfe157a265550479afa5a Merge pull request #3756 from pallets/dependabot/pip/pytest-6.0.2
 ad10d12177c99fbe0f3e07c92efc492b0171fd1c Bump pytest from 6.0.1 to 6.0.2
@@ -3654,6 +3656,3 @@ fe6c279df12294e590e87705b0ba8728a3ed54c4 Synched tagline :)
 0b9c2b5eb1b604cd76d9252e8e9628df731ea572 removed refactoring leftover
 74862dcbca052ea0a994da3f507c00e9cc18821c Added makefile target for website and doc updating.
 b9cae3564ad31876d977c24a09d760e77ca992f3 Reordered deployment docs
-5310fc38227b1907cb541f4a30ea8dfef46c2e19 Session falls back to a dummy object now if secret_key is missing.
-791cdb28f593d4d7649d88407fcd193834512219 Fixed capitalization on website
-9fbf9a062c11904b5022a5aa7941449e31340c32 head is 0.2-dev
