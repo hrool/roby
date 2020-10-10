@@ -1,3 +1,4 @@
+bdf7083cfdeef0e0bdd0bf6d4c23b26c92b52d95 refer to encoder instead of decoder
 4e8b0204942d89c7956f4e1a20e97b1a16ba6800 Merge pull request #3773 from pallets/dependabot/pip/greenlet-0.4.17
 84a4669e54cc15e1c0e681ac6c4a7ae24db05342 Bump greenlet from 0.4.16 to 0.4.17
 7e312c421ee1ccd57a6f1a5c43a00e8e4ec6a7d9 aesthetic: add a space after a comma (#3771)
@@ -3654,4 +3655,3 @@ bcf347fe8db124242da30b97c7e570f28c273d26 New style for the documentation.  Looks
 42dd94b7565052120423dbd86a5ab0f96938f8cc Fixed title.
 b4cd70d054a1514adaed893663cfa22b73114d1e Updated website
 325dfa2469f86e03187b6d9e6aee4745b702c496 Larger fonts in the docs
-fe6c279df12294e590e87705b0ba8728a3ed54c4 Synched tagline :)
