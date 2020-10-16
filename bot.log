@@ -1,3 +1,6 @@
+1035efc7d6e49a459ec2dcbfab9526a7347d6f2e Add command switch tabs for Bash, CMD and Powershell with sphinx-tabs (#3714)
+c5a5d9b30bafcc242c0ae6004d71f7238e002e06 Bump pytest from 6.0.2 to 6.1.1 (#3790)
+967b2350354a59a2b8ae0f5a481511353bfec136 Merge pull request #3728 from nphilipp/master--discover-app-factory-deterministically
 8c6baeedab60e0041317c2709df100dfd216c2ef parametrize some tests (#3786)
 bdf7083cfdeef0e0bdd0bf6d4c23b26c92b52d95 refer to encoder instead of decoder
 4e8b0204942d89c7956f4e1a20e97b1a16ba6800 Merge pull request #3773 from pallets/dependabot/pip/greenlet-0.4.17
@@ -16,6 +19,7 @@ fe55f92cdc575d00204a134b2d556c1053e1ed4e Fix pre-commit cache key in GitHub Acti
 8952a178715c0f47f71a3600e9cfd49dd518096e Merge pull request #3739 from WolframAlph/typo-fix
 e071734b4e9f5c21fe65400b167ff327c6c1f7bc Merge pull request #3734 from pallets/dependabot/pip/sphinx-3.2.1
 7be45a4c5bb557cde56efac0cb85e0a9120acc37 Bump sphinx from 3.2.0 to 3.2.1
+cf3089a8f82d50430da4cbe690c1ef11d30241ec Discover app factory deterministically
 1a9059dd3a0c1a8574f6555e92f3ec3c596284f5 Merge pull request #3725 from pallets/dependabot/pip/sphinx-3.2.0
 1a6621ed840994b9600f12dde3bcb898c858889d Bump sphinx from 3.1.2 to 3.2.0
 5bf8cc225f1e7f7efb2e8aa1f8e2c11190c1e5f8 Merge pull request #3722 from pallets/dependabot/pip/tox-3.19.0
@@ -3652,5 +3656,3 @@ ab5492418694b5cc14601a953084d61f47785ea4 Fixed a font name.
 764b4e4f7dbe48366d7f01d8bd0c56f4e76b79ee dirhtml > html for websites
 fdf4d79bdc3a5872e99b4e9c9bc0e29cfd195cb4 Normalized line heights.
 88ea383394b47278779031b47de23fbd5ba89dbe Less flashy color for highlights.
-bcf347fe8db124242da30b97c7e570f28c273d26 New style for the documentation.  Looks more like the website now.
-42dd94b7565052120423dbd86a5ab0f96938f8cc Fixed title.

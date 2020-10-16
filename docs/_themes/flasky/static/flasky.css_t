@@ -185,7 +185,7 @@ a.headerlink:hover {
 }
  
 div.body p, div.body dd, div.body li {
-    line-height: 1.5em;
+    line-height: 1.4em;
 }
 
 div.admonition {
@@ -211,6 +211,10 @@ div.admonition p.last {
 
 div.highlight{
     background-color: white;
+}
+
+dt:target, .highlight {
+    background: #FAF3E8;
 }
 
 div.note {
