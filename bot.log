@@ -3654,5 +3654,3 @@ ab5492418694b5cc14601a953084d61f47785ea4 Fixed a font name.
 42a46ed09b745c0560de354c0cb236295000f296 Fixed homepage links
 123a1ad019a842a07a84aace66fd7a33f6f68cb9 Breaking docs up into smaller pieces
 764b4e4f7dbe48366d7f01d8bd0c56f4e76b79ee dirhtml > html for websites
-fdf4d79bdc3a5872e99b4e9c9bc0e29cfd195cb4 Normalized line heights.
-88ea383394b47278779031b47de23fbd5ba89dbe Less flashy color for highlights.
