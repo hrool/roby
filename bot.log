@@ -3649,6 +3649,3 @@ ce18d4575dd8468878668d777d83448eeae4fd0d Added WTForms documentation.
 94cf620914615b991063f00314ea1c8da9790c99 Updated SQLAlchemy docs.
 13090389365184fc2291e2cc69fb9b2af5426585 updated README
 bf52a17902cdbc300ee91ec1b2e8d2b7890ba35c Removed useless code
-190059c8f01c6f75243824e765d08a7cce386eda Added support for macro pulling and documented certain design decisions.
-ab5492418694b5cc14601a953084d61f47785ea4 Fixed a font name.
-63593d281b7358a86a808cc0bf5e47107316403d removed unused import
