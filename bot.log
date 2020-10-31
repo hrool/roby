@@ -1,3 +1,4 @@
+5d60cce2429e2c7e11e9acc5ea030464bf169f84 Updating external_url_handler example to Python 3 (#3816)
 070a0c1c759e686ac03e9cdfca64b116665df6d4 removing outdated xhtml information (#3802)
 1035efc7d6e49a459ec2dcbfab9526a7347d6f2e Add command switch tabs for Bash, CMD and Powershell with sphinx-tabs (#3714)
 c5a5d9b30bafcc242c0ae6004d71f7238e002e06 Bump pytest from 6.0.2 to 6.1.1 (#3790)
@@ -3646,6 +3647,3 @@ ce18d4575dd8468878668d777d83448eeae4fd0d Added WTForms documentation.
 0770f5c6375e3e45fa3ac918217df5d885176173 Removed two unused imports.
 3491465d55f093a498f2f496cd33bebba137518c No sudo for windows users.
 100776147a063dcf53f74678b045ac0f5d6386d4 Added troubleshooting section to the tutorial
-94cf620914615b991063f00314ea1c8da9790c99 Updated SQLAlchemy docs.
-13090389365184fc2291e2cc69fb9b2af5426585 updated README
-bf52a17902cdbc300ee91ec1b2e8d2b7890ba35c Removed useless code
