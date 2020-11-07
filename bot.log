@@ -1,3 +1,9 @@
+bbb273bb761461ab329f03ff2d9002f6cb81e2a4 Merge pull request #3828 from pallets/move-send-file
+dc11cdb4a4627b9f8c79e47e39aa7e1357151896 move send_file and send_from_directory to Werkzeug
+15a49e72977d7a44ec4f54de7078053fbfb4f3b6 Merge branch '1.1.x'
+577eec198adfb0a69f059e87c53d6ace55c55a77 updated doc for mod_wsgi (#3751)
+22987b68173e9bf56cc450cb7aeb93f5480a2660 include samesite and secure when removing session cookie (#3726)
+7a444c5dab97d640282ec8fc4838bef2c128273f update tests for new werkzeug client (#3827)
 373f0dd82e68ab7cac7a77344e715dbe68faebd3 update requirements (#3823)
 3b57c19e3bd6acf729ae40ece710b20f7f5997e7 Bump pytest from 6.1.1 to 6.1.2 (#3818)
 aa0c9493c67a878b4e67dbe620e0d780cf961d56 Bump tox from 3.20.0 to 3.20.1 (#3819)
@@ -15,13 +21,16 @@ a0e2aca770c756d9f7de53339e2cf9067a52df11 move json tests to separate file
 070a0c1c759e686ac03e9cdfca64b116665df6d4 removing outdated xhtml information (#3802)
 1035efc7d6e49a459ec2dcbfab9526a7347d6f2e Add command switch tabs for Bash, CMD and Powershell with sphinx-tabs (#3714)
 c5a5d9b30bafcc242c0ae6004d71f7238e002e06 Bump pytest from 6.0.2 to 6.1.1 (#3790)
+9d824db41c930126db7bc6af5c54eec670cf086c Update the signature of the teardown function (#3730)
 967b2350354a59a2b8ae0f5a481511353bfec136 Merge pull request #3728 from nphilipp/master--discover-app-factory-deterministically
 8c6baeedab60e0041317c2709df100dfd216c2ef parametrize some tests (#3786)
+fa5aebc842c1cd19a57503984310db21aa512904 updated Sentry link (#3788)
 bdf7083cfdeef0e0bdd0bf6d4c23b26c92b52d95 refer to encoder instead of decoder
 4e8b0204942d89c7956f4e1a20e97b1a16ba6800 Merge pull request #3773 from pallets/dependabot/pip/greenlet-0.4.17
 84a4669e54cc15e1c0e681ac6c4a7ae24db05342 Bump greenlet from 0.4.16 to 0.4.17
 7e312c421ee1ccd57a6f1a5c43a00e8e4ec6a7d9 aesthetic: add a space after a comma (#3771)
 598c56c4983b33cbd9178f28516ebee33dd10fdd fix grammar (#3769)
+12a4d1554689c0a0ac13988b0daf10c23c37c81d Update quickstart.rst (#3767)
 de464c03e134127140e5622e230790806a133ff9 Correct Sentry advertisement (not Free Software) (#3758)
 e0d7d402e188f6b70f0cfe157a265550479afa5a Merge pull request #3756 from pallets/dependabot/pip/pytest-6.0.2
 ad10d12177c99fbe0f3e07c92efc492b0171fd1c Bump pytest from 6.0.1 to 6.0.2
@@ -83,6 +92,8 @@ d0d7b796c4b49361be8e358f905dde16ae5021e3 Merge pull request #3686 from pallets/d
 aab20ad431985b85dbe756b375e6ccfa39132054 fix typo
 a12a34100ac0ab85c29f87117ac0b75100b52d3c Merge pull request #3680 from pallets/feature/doc-fixes
 4a1acc8b5f0b5608fa8f20a1ef3afc13574cb96e Some small doc fixes
+b82c2e611a16efce910f2ae5eafc94066d48ec38 Merge pull request #3678 from jab/1.1.x-pathlib-static-folder
+b724832872ae4b4cd4b5f61c153eae39f1c3b213 Cherry-pick 7ba35c4 from master (support pathlib.Path for static_folder)
 cf5b1d028342a2f7c929a23d53367addf106064e Merge pull request #3579 from jab/pathlib-for-static_folder
 7ba35c4d4fe99418cee9c87900bd0d3b38cf5bd0 Restore support for using pathlib.Path for static_folder.
 b82cca728341926399ef4c06a7342867f5c43c72 Merge pull request #3677 from pallets/dependabot/pip/sphinx-3.1.2
@@ -3656,4 +3667,3 @@ a50a87c4ca7f44821e9561ae6b69300b8809c46c ScriptName -> ScriptAlias
 56675b3bade603a458d01443bda8070ca0489005 Fixed indentation of an example.
 976e792336fa6c4696f534ac1d537d2a86a75e72 Added links for SQLAlchemy and WTForms.
 ce18d4575dd8468878668d777d83448eeae4fd0d Added WTForms documentation.
-73a47a0db1a181bb305684115d3dacded0c5a58b Removed unused stuff from minitwit and fixed a bug.
