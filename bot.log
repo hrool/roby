@@ -3664,6 +3664,3 @@ c64a4e0befc0718500c544f5c847d6632b8fb598 Break up deployment docs into separate 
 a50a87c4ca7f44821e9561ae6b69300b8809c46c ScriptName -> ScriptAlias
 84899948be190a5e180fdccb25e6d7a8498fee7c Corrected order of the tutorial
 166f5ed254d829b2d87fca241e1a22b0a64fff1c Forgot to link the website.
-56675b3bade603a458d01443bda8070ca0489005 Fixed indentation of an example.
-976e792336fa6c4696f534ac1d537d2a86a75e72 Added links for SQLAlchemy and WTForms.
-ce18d4575dd8468878668d777d83448eeae4fd0d Added WTForms documentation.
