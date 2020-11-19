@@ -1,3 +1,6 @@
+0855252f8c07084745fc598579ad40447a26d1f5 Fix ci environment command syntax (#3836)
+d6b974f821fe37bb782a80e64174ee3180fc5215 update deprecated set-env ci command (#3835)
+11798fd01b275b2dbb448c15ecdba0c9a7d973ad [pre-commit.ci] pre-commit autoupdate
 b2464883ce2cb7fe1b5d48509dd9a3a3ea7aeb01 reduce lock schedule to daily
 f325b8b5be07233747c2968af281552437067215 add lock threads workflow
 bbb273bb761461ab329f03ff2d9002f6cb81e2a4 Merge pull request #3828 from pallets/move-send-file
@@ -3660,4 +3663,3 @@ ade490514dd6d83adc7610f69f9c4cd68df47110 Fixed a security problem caused by chan
 07e515b071e32e1b22e9992cedabeb082a8cde6c Leaving -> living ....
 3d320176813e87b8dccbbbc807133dfe6ce0bcde Added instructions about how to run the latest development version.
 f878919753a909e45b2d5448aa175f4f9129ff24 With -> with in headline
-a99e408bd109783561d408ef34c286cdd9b51845 Finished jQuery example documentation.
