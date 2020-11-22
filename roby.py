@@ -259,6 +259,11 @@ def _get_package_path(name):
         return os.getcwd()
 
 
+def _tojson_filter(string, *args, **kwargs):
+    """Calls dumps for the template engine, escaping Slashes properly."""
+    return json.dumps(string, *args, **kwargs).replace('/', '\\/')
+
+
 class Flask(object):
     """The flask object implements a WSGI application and acts as the central
     object.  It is passed the name of the module or package of the
@@ -379,7 +384,7 @@ class Flask(object):
             get_flashed_messages=get_flashed_messages
         )
         if json_available:
-            self.jinja_env.filters['tojson'] = json.dumps
+            self.jinja_env.filters['tojson'] = _tojson_filter
 
     def create_jinja_loader(self):
         """Creates the Jinja loader.  By default just a package loader for
@@ -476,9 +481,9 @@ class Flask(object):
         """
         session.save_cookie(response, self.session_cookie_name)
 
-    def add_url_rule(self, rule, endpoint, **options):
+    def add_url_rule(self, rule, endpoint, view_func=None, **options):
         """Connects a URL rule.  Works exactly like the :meth:`route`
-        decorator but does not register the view function for the endpoint.
+        decorator. If a view_func is provided it will be registered with the endpoint.
 
         Basically this example::
 
@@ -490,19 +495,27 @@ class Flask(object):
 
             def index():
                 pass
-            app.add_url_rule('index', '/')
+            app.add_url_rule('/', 'index', index)
+            
+         If the view_func is not provided you will need to connect the endpoint to a 
+         view function like so:
             app.view_functions['index'] = index
 
         :param rule: the URL rule as string
         :param endpoint: the endpoint for the registered URL rule.  Flask
                          itself assumes the name of the view function as
                          endpoint
+        :param view_func: the function to call when servicing a request to the provided endpoint
         :param options: the options to be forwarded to the underlying
                         :class:`~werkzeug.routing.Rule` object
+
+        .. versionadded:: 0.2
         """
         options['endpoint'] = endpoint
         options.setdefault('methods', ('GET',))
         self.url_map.add(Rule(rule, **options))
+        if view_func is not None:
+            self.view_functions[endpoint] = view_func
 
     def route(self, rule, **options):
         """A decorator that is used to register a view function for a
@@ -570,8 +583,7 @@ class Flask(object):
                         :class:`~werkzeug.routing.Rule` object.
         """
         def decorator(f):
-            self.add_url_rule(rule, f.__name__, **options)
-            self.view_functions[f.__name__] = f
+            self.add_url_rule(rule, f.__name__, f, **options)
             return f
         return decorator
 

@@ -3660,6 +3660,3 @@ a7ff9dbddd5f861463051601177442e98aae84bf Proofreading the documentation
 5acc491c94262912baa30a4cffc780a46b7faf56 Refactored the @route decorator to use the new add_url_rule method. Tagged add_url_rule with versionadded of 0.2
 36f105c2932af842de5d18899783f33078415c7f Removed possible bashism. source -> .
 ade490514dd6d83adc7610f69f9c4cd68df47110 Fixed a security problem caused by changed simplejson semantics.
-07e515b071e32e1b22e9992cedabeb082a8cde6c Leaving -> living ....
-3d320176813e87b8dccbbbc807133dfe6ce0bcde Added instructions about how to run the latest development version.
-f878919753a909e45b2d5448aa175f4f9129ff24 With -> with in headline
