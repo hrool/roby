@@ -1,3 +1,5 @@
+28a3eb106c20eb6c3b9064f27f07a2ca89c0a4d7 Merge pull request #3842 from pallets/pre-commit-ci-update-config
+cd3a93a9c1aaf8440d366cbebbc852e1033914cd [pre-commit.ci] pre-commit autoupdate
 0855252f8c07084745fc598579ad40447a26d1f5 Fix ci environment command syntax (#3836)
 d6b974f821fe37bb782a80e64174ee3180fc5215 update deprecated set-env ci command (#3835)
 11798fd01b275b2dbb448c15ecdba0c9a7d973ad [pre-commit.ci] pre-commit autoupdate
@@ -3657,6 +3659,3 @@ a7ff9dbddd5f861463051601177442e98aae84bf Proofreading the documentation
 50a331307114a641d1d9447453f8fddc52fe680f Fixed typo in form docs
 06ec917ddedc618944670b39ccd5f4cb862882b2 Only escape backslashes if they follow "<" in JSON dumping for templates.
 95750b3287bfa21fbb706f10a3a9fbcef01c089e Documented some routing converter possibilities.
-5acc491c94262912baa30a4cffc780a46b7faf56 Refactored the @route decorator to use the new add_url_rule method. Tagged add_url_rule with versionadded of 0.2
-36f105c2932af842de5d18899783f33078415c7f Removed possible bashism. source -> .
-ade490514dd6d83adc7610f69f9c4cd68df47110 Fixed a security problem caused by changed simplejson semantics.
