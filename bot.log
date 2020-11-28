@@ -3657,5 +3657,3 @@ eae44e465b4bdd9440dbfa6e0c5bc45fd2c60ed8 Typo in README
 a7ff9dbddd5f861463051601177442e98aae84bf Proofreading the documentation
 4ff9493e5765f3d2c2fd2dd1882791a75ad6fc68 POST -> post in HTML
 50a331307114a641d1d9447453f8fddc52fe680f Fixed typo in form docs
-06ec917ddedc618944670b39ccd5f4cb862882b2 Only escape backslashes if they follow "<" in JSON dumping for templates.
-95750b3287bfa21fbb706f10a3a9fbcef01c089e Documented some routing converter possibilities.
