@@ -3651,6 +3651,3 @@ eae44e465b4bdd9440dbfa6e0c5bc45fd2c60ed8 Typo in README
 9f6bc93e4de36fc209eb1203845e9505df1ca379 Fixed XSS problem by escaping all slashes in JSON.
 268302fc68c35abd555a8c2d2755f14c96e1401d Changed link to license.
 3a1e51865786474c44a04c0d422515047dd27223 Fixed typo and added AUTHORS file and license text to docs.
-715f64d2afef0e5b9800f0e0fb0eb9c892e1573a Some more documentation updates.
-1404a85bc554f96bff5463e6eadb14662b945f2e Fixed WTForms example.
-9f0b2429d638e54cb534b555c393d0770dfc1a8f The testsuite skips JSON tests now is not available and runs the example tests as well.
