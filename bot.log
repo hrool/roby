@@ -3647,5 +3647,3 @@ f6b9efc1e9b94382b877c0d1ebe87956b78d012f Added missing os import.
 af3b73f70d5fce72181530d384519ae31d77c772 Tiny refactoring
 eae44e465b4bdd9440dbfa6e0c5bc45fd2c60ed8 Typo in README
 75057bb4112d16acc7ed5dafce6a8168b343fd78 Slightly faster _tojson_filter.
-3c821a0fa45082bcec73dfb08662fb1de5263c48 Fix typos and remove unused import.
-9f6bc93e4de36fc209eb1203845e9505df1ca379 Fixed XSS problem by escaping all slashes in JSON.
