@@ -3645,5 +3645,3 @@ c0d3b6c3710025abb482b30d2f2b6e39a6934fa9 Merge.
 f6b9efc1e9b94382b877c0d1ebe87956b78d012f Added missing os import.
 3053fcdb0d6189ad1deca6fcfa16443dad4baf8c Make the example tests pass on Windows.
 af3b73f70d5fce72181530d384519ae31d77c772 Tiny refactoring
-eae44e465b4bdd9440dbfa6e0c5bc45fd2c60ed8 Typo in README
-75057bb4112d16acc7ed5dafce6a8168b343fd78 Slightly faster _tojson_filter.
