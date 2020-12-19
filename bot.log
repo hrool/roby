@@ -3642,5 +3642,3 @@ c0d3b6c3710025abb482b30d2f2b6e39a6934fa9 Merge.
 5876a8fd96efa01958904ca0796eb4018222bf25 Merge more upstream changes
 9cf2ea2abc5243d50c87612714904c6cb033f7cc Documented hostname change.
 260b4dfe61cd35373eb4993453b500e1db71a753 Added changelog, restructured docs a bit.
-f6b9efc1e9b94382b877c0d1ebe87956b78d012f Added missing os import.
-3053fcdb0d6189ad1deca6fcfa16443dad4baf8c Make the example tests pass on Windows.
