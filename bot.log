@@ -1,3 +1,5 @@
+9b62405f349ae3ec6164d87e801aab2d214cd23a Merge pull request #3854 from pallets/pre-commit-ci-update-config
+cab8121d8f94a465c11814010f4453d1bf61008a [pre-commit.ci] pre-commit autoupdate
 28a3eb106c20eb6c3b9064f27f07a2ca89c0a4d7 Merge pull request #3842 from pallets/pre-commit-ci-update-config
 cd3a93a9c1aaf8440d366cbebbc852e1033914cd [pre-commit.ci] pre-commit autoupdate
 0855252f8c07084745fc598579ad40447a26d1f5 Fix ci environment command syntax (#3836)
@@ -3641,4 +3643,3 @@ c0d3b6c3710025abb482b30d2f2b6e39a6934fa9 Merge.
 9d340ad7477774a19a7bdffc83d6cb8cb3e05edc Fix a doc oversight, and revert 5876a8fd.
 5876a8fd96efa01958904ca0796eb4018222bf25 Merge more upstream changes
 9cf2ea2abc5243d50c87612714904c6cb033f7cc Documented hostname change.
-260b4dfe61cd35373eb4993453b500e1db71a753 Added changelog, restructured docs a bit.
