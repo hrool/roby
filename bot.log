@@ -3640,4 +3640,3 @@ dbe0df756bf587b242f2406bef9e7e8ef26f0813 Use setdefault() because it sets sessio
 f014ce29a7cd5a3ccfabd61e7d66e017ed958e25 Fix a doc oversight, and revert 5876a8fd.
 b6e73305392c9de052e51cca6fae8fee12ae231e Use setdefault() because it sets session.modified correctly.
 c0d3b6c3710025abb482b30d2f2b6e39a6934fa9 Merge.
-9d340ad7477774a19a7bdffc83d6cb8cb3e05edc Fix a doc oversight, and revert 5876a8fd.
