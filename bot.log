@@ -1,3 +1,11 @@
+d42eac90f6e3f0c84736005a78c262a66187cc74 Merge pull request #3859 from pallets/dependabot/pip/packaging-20.8
+a7cf23a2343e04e61bb770d373a29e2666c56330 Bump packaging from 20.4 to 20.8
+959c64e8ceb76a059aa20cfc048c4b2ff078090a Merge pull request #3857 from pallets/dependabot/pip/pip-tools-5.5.0
+d1a21022e0cf6b7243ce26965a13a0b8fe371f10 Bump pip-tools from 5.3.1 to 5.5.0
+50eb6e579ff403d59f8b80c17718682a240b8c08 Merge pull request #3856 from pallets/dependabot/pip/pre-commit-2.9.3
+27a36f1446a9fb3639da91794b87b333ff3ab83e Merge pull request #3855 from pallets/dependabot/pip/sphinx-3.4.1
+2622739771778f2b901de5ad690ab1028c2a1df0 Bump pre-commit from 2.8.2 to 2.9.3
+e4c70eff7747abf12726d90f38d3c28006baf087 Bump sphinx from 3.2.1 to 3.4.1
 de0af038627fd4f45bfe61ca9aed36b8e10770d5 Merge remote-tracking branch 'origin/1.1.x'
 7d3ae48d57e1f989dfec42e98997ca8b75370c9a fix explanation of wheel name (#3848)
 9b62405f349ae3ec6164d87e801aab2d214cd23a Merge pull request #3854 from pallets/pre-commit-ci-update-config
@@ -3637,6 +3645,3 @@ ebb07a06567d72acf47b3ee5553053216f978305 Better English.
 1cb75df8f1f9e7a768254fe2c9e2997f21152665 Add leftovers from website branch to gitignore
 3261357ba7f59e2eabeb96127b6253d1466b4db0 Removed website from main branch.  Makes no sense to be there
 d73be4b709ab881ae15b9bd1064b16820f98a51b Merge branch 'florentx-fork'
-7e8019565f79e157fcc13cf285247070d69ef889 Added florentx to the AUTHORS file
-dbe0df756bf587b242f2406bef9e7e8ef26f0813 Use setdefault() because it sets session.modified correctly.
-f014ce29a7cd5a3ccfabd61e7d66e017ed958e25 Fix a doc oversight, and revert 5876a8fd.
