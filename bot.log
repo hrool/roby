@@ -1,3 +1,7 @@
+2fab8a31ae2639b3eacdd3935d58203b09650f29 Fix broken func directives in docstrings
+7d2ba3e1fc55e8d04308ede674263727c85c86d2 Merge remote-tracking branch 'origin/1.1.x'
+444550ab0c2ba8b1e003dee198b5628bc58302ce Merge pull request #3862 from huimingz/patch-1
+aff21fd8bc4d168caf481de87bb5447adccd18ad Document parameter description error
 d42eac90f6e3f0c84736005a78c262a66187cc74 Merge pull request #3859 from pallets/dependabot/pip/packaging-20.8
 a7cf23a2343e04e61bb770d373a29e2666c56330 Bump packaging from 20.4 to 20.8
 959c64e8ceb76a059aa20cfc048c4b2ff078090a Merge pull request #3857 from pallets/dependabot/pip/pip-tools-5.5.0
@@ -3643,5 +3647,3 @@ dc3f13df54ba91649ecec2bdee6c24ca31a400a8 Corrected validator usage in the wtform
 be15340e0f65e8785aff3033f0b2732ae31c6b81 Added mailinglist link to the README
 ebb07a06567d72acf47b3ee5553053216f978305 Better English.
 1cb75df8f1f9e7a768254fe2c9e2997f21152665 Add leftovers from website branch to gitignore
-3261357ba7f59e2eabeb96127b6253d1466b4db0 Removed website from main branch.  Makes no sense to be there
-d73be4b709ab881ae15b9bd1064b16820f98a51b Merge branch 'florentx-fork'
