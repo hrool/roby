@@ -15,7 +15,6 @@ import sys
 import flask
 import unittest
 import tempfile
-import warnings
 
 
 example_path = os.path.join(os.path.dirname(__file__), '..', 'examples')
@@ -225,19 +224,6 @@ class BasicFunctionalityTestCase(unittest.TestCase):
             assert flask.url_for('static', filename='index.html') \
                 == '/static/index.html'
 
-    def test_none_response(self):
-        warnings.filterwarnings('error', 'View function did not return')
-        app = flask.Flask(__name__)
-        @app.route('/')
-        def test():
-            return None
-        try:
-            app.test_client().get('/')
-        except Warning:
-            pass
-        else:
-            assert "Expected warning"
-
 
 class JSONTestCase(unittest.TestCase):
 
@@ -310,6 +296,31 @@ class TemplatingTestCase(unittest.TestCase):
         with app.test_request_context():
             macro = flask.get_template_attribute('_macro.html', 'hello')
             assert macro('World') == 'Hello World!'
+
+
+class ModuleTestCase(unittest.TestCase):
+
+    def test_basic_module(self):
+        app = flask.Flask(__name__)
+        admin = flask.Module('admin', url_prefix='/admin')
+        @admin.route('/')
+        def index():
+            return 'admin index'
+        @admin.route('/login')
+        def login():
+            return 'admin login'
+        @admin.route('/logout')
+        def logout():
+            return 'admin logout'
+        @app.route('/')
+        def index():
+            return 'the index'
+        app.register_module('admin', admin)
+        c = app.test_client()
+        assert c.get('/').data == 'the index'
+        assert c.get('/admin/').data == 'admin index'
+        assert c.get('/admin/login').data == 'admin login'
+        assert c.get('/admin/logout').data == 'admin logout'
 
 
 def suite():

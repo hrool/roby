@@ -13,6 +13,7 @@ from __future__ import with_statement
 import os
 import sys
 
+from itertools import chain
 from jinja2 import Environment, PackageLoader, FileSystemLoader
 from werkzeug import Request as RequestBase, Response as ResponseBase, \
      LocalStack, LocalProxy, create_environ, SharedDataMiddleware, \
@@ -56,7 +57,13 @@ class Request(RequestBase):
     :attr:`~flask.Flask.request_class` to your subclass.
     """
 
-    endpoint = view_args = None
+    endpoint = view_args = routing_exception = None
+
+    @property
+    def module(self):
+        """The name of the current module"""
+        if self.endpoint and '.' in self.endpoint:
+            return self.endpoint.rsplit('.', 1)[0]
 
     @cached_property
     def json(self):
@@ -117,6 +124,12 @@ class _RequestContext(object):
         self.g = _RequestGlobals()
         self.flashes = None
 
+        try:
+            self.request.endpoint, self.request.view_args = \
+                self.url_adapter.match()
+        except HTTPException, e:
+            self.request.routing_exception = e
+
     def __enter__(self):
         _request_ctx_stack.push(self)
 
@@ -134,7 +147,14 @@ def url_for(endpoint, **values):
     :param endpoint: the endpoint of the URL (name of the function)
     :param values: the variable arguments of the URL rule
     """
-    return _request_ctx_stack.top.url_adapter.build(endpoint, values)
+    ctx = _request_ctx_stack.top
+    if '.' not in endpoint:
+        mod = ctx.request.module
+        if mod is not None:
+            endpoint = mod + '.' + endpoint
+    elif endpoint.startswith('.'):
+        endpoint = endpoint[1:]
+    return ctx.url_adapter.build(endpoint, values)
 
 
 def get_template_attribute(template_name, attribute):
@@ -275,6 +295,51 @@ else:
     _tojson_filter = json.dumps
 
 
+class _ModuleSetupState(object):
+
+    def __init__(self, app, url_prefix=None):
+        self.app = app
+        self.url_prefix = url_prefix
+
+
+class Module(object):
+    """Container object that enables pluggable applications"""
+
+    def __init__(self, name, url_prefix=None, package_name=None):
+        self.name = name
+        self.package_name = package_name
+        self.url_prefix = url_prefix
+        self._register_events = []
+
+    def route(self, rule, **options):
+        def decorator(f):
+            self.add_url_rule(rule, f.__name__, f, **options)
+            return f
+        return decorator
+
+    def add_url_rule(self, rule, endpoint, view_func=None, **options):
+        self._record(self._register_rule, (rule, endpoint, view_func, options))
+
+    def before_request(self, f):
+        self._record(lambda s: s.app.before_request_funcs
+            .setdefault(self.name, []).append(f), ())
+        return f
+
+    def after_request(self, f):
+        self._record(lambda s: s.app.after_request_funcs
+            .setdefault(self.name, []).append(f), ())
+        return f
+
+    def _record(self, func, args):
+        self._register_events.append((func, args))
+
+    def _register_rule(self, state, rule, endpoint, view_func, options):
+        if self.url_prefix:
+            rule = state.url_prefix + rule
+        self.app.add_url_rule(rule, '%s.%s' % (self.name, endpoint),
+                              view_func, **options)
+
+
 class Flask(object):
     """The flask object implements a WSGI application and acts as the central
     object.  It is passed the name of the module or package of the
@@ -356,14 +421,14 @@ class Flask(object):
         #: getting hold of the currently logged in user.
         #: To register a function here, use the :meth:`before_request`
         #: decorator.
-        self.before_request_funcs = []
+        self.before_request_funcs = {}
 
         #: a list of functions that are called at the end of the
         #: request.  The function is passed the current response
         #: object and modify it in place or replace it.
         #: To register a function here use the :meth:`after_request`
         #: decorator.
-        self.after_request_funcs = []
+        self.after_request_funcs = {}
 
         #: a list of functions that are called without arguments
         #: to populate the template context.  Each returns a dictionary
@@ -506,7 +571,14 @@ class Flask(object):
         """
         session.save_cookie(response, self.session_cookie_name)
 
-    def add_url_rule(self, rule, endpoint, view_func=None, **options):
+    def register_module(self, module, **options):
+        """Registers a module with this application."""
+        options.setdefault('url_prefix', self.url_prefix)
+        state = _ModuleSetupState(app, options)
+        for func, args in module._register_events:
+            func(state, *args)
+
+    def add_url_rule(self, rule, endpoint=None, view_func=None, **options):
         """Connects a URL rule.  Works exactly like the :meth:`route`
         decorator.  If a view_func is provided it will be registered with the
         endpoint.
@@ -529,7 +601,7 @@ class Flask(object):
             app.view_functions['index'] = index
 
         .. versionchanged:: 0.2
-           `view_func` parameter added
+           `view_func` parameter added.
 
         :param rule: the URL rule as string
         :param endpoint: the endpoint for the registered URL rule.  Flask
@@ -540,6 +612,10 @@ class Flask(object):
         :param options: the options to be forwarded to the underlying
                         :class:`~werkzeug.routing.Rule` object
         """
+        if endpoint is None:
+            assert view_func is not None, 'expected view func if endpoint ' \
+                                          'is not provided.'
+            endpoint = view_func.__name__
         options['endpoint'] = endpoint
         options.setdefault('methods', ('GET',))
         self.url_map.add(Rule(rule, **options))
@@ -612,7 +688,7 @@ class Flask(object):
                         :class:`~werkzeug.routing.Rule` object.
         """
         def decorator(f):
-            self.add_url_rule(rule, f.__name__, f, **options)
+            self.add_url_rule(rule, None, f, **options)
             return f
         return decorator
 
@@ -641,12 +717,12 @@ class Flask(object):
 
     def before_request(self, f):
         """Registers a function to run before each request."""
-        self.before_request_funcs.append(f)
+        self.before_request_funcs.setdefault(None, []).append(f)
         return f
 
     def after_request(self, f):
         """Register a function to be run after each request."""
-        self.after_request_funcs.append(f)
+        self.after_request_funcs.setdefault(None, []).append(f)
         return f
 
     def context_processor(self, f):
@@ -654,24 +730,17 @@ class Flask(object):
         self.template_context_processors.append(f)
         return f
 
-    def match_request(self):
-        """Matches the current request against the URL map and also
-        stores the endpoint and view arguments on the request object
-        is successful, otherwise the exception is stored.
-        """
-        rv = _request_ctx_stack.top.url_adapter.match()
-        request.endpoint, request.view_args = rv
-        return rv
-
     def dispatch_request(self):
         """Does the request dispatching.  Matches the URL and returns the
         return value of the view or error handler.  This does not have to
         be a response object.  In order to convert the return value to a
         proper response object, call :func:`make_response`.
         """
+        req = _request_ctx_stack.top.request
         try:
-            endpoint, values = self.match_request()
-            return self.view_functions[endpoint](**values)
+            if req.routing_exception is not None:
+                raise req.routing_exception
+            return self.view_functions[req.endpoint](**req.view_args)
         except HTTPException, e:
             handler = self.error_handlers.get(e.code)
             if handler is None:
@@ -687,7 +756,7 @@ class Flask(object):
         """Converts the return value from a view function to a real
         response object that is an instance of :attr:`response_class`.
 
-        The following types are allowed for `rv`:
+        The following types are allowd for `rv`:
 
         ======================= ===========================================
         :attr:`response_class`  the object is returned unchanged
@@ -703,11 +772,6 @@ class Flask(object):
 
         :param rv: the return value from the view function
         """
-        if rv is None:
-            from warnings import warn
-            warn(Warning('View function did not return a response'),
-                 stacklevel=2)
-            return u''
         if isinstance(rv, self.response_class):
             return rv
         if isinstance(rv, basestring):
@@ -723,7 +787,11 @@ class Flask(object):
         if it was the return value from the view and further
         request handling is stopped.
         """
-        for func in self.before_request_funcs:
+        funcs = self.before_request_funcs.get(None, ())
+        mod = request.module
+        if mod and mod in self.before_request_funcs:
+            funcs = chain(funcs, self.before_request_funcs[mod])
+        for func in funcs:
             rv = func()
             if rv is not None:
                 return rv
@@ -737,10 +805,14 @@ class Flask(object):
         :return: a new response object or the same, has to be an
                  instance of :attr:`response_class`.
         """
-        session = _request_ctx_stack.top.session
-        if not isinstance(session, _NullSession):
-            self.save_session(session, response)
-        for handler in self.after_request_funcs:
+        ctx = _request_ctx_stack.top
+        mod = ctx.request.module
+        if not isinstance(ctx.session, _NullSession):
+            self.save_session(ctx.session, response)
+        funcs = self.after_request_funcs.get(None, ())
+        if mod and mod in self.after_request_funcs:
+            funcs = chain(funcs, self.after_request_funcs[mod])
+        for handler in funcs:
             response = handler(response)
         return response
 
