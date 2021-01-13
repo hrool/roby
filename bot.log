@@ -3644,5 +3644,3 @@ ef34638f5d24c07a5582cbb60755fd4dfbec9a79 Updated docs for external server inform
 67f4b0f31538832f06b9351d15e30c85f449ac7e Modules are now instanciated with the package name.
 2f181e19496a1fe693d9b20260fe961bb406c53b Removed unused package_name attribute
 5c52fe980eda6065edcc39e6dd346636b1c40768 Added request/response processing based on modules.
-e0148a00c0f468784052926f80e8112be7686470 Basic module support is working, but does not look very nice.
-444e6425312a16589130ff36f2830b6f97fbbd4f extended URL generation
