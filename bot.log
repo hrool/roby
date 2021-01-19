@@ -3640,6 +3640,3 @@ c21caa5047f966aa5f6a3d0e5e4611abd44ae861 Merge branch 'master' into module-suppo
 0c54d0a0e5dfec25cd60329e09622d42905d0969 Added pattern for file uploads.
 0da39c76e3c67293aef2234b43aff8728d9002eb More documentation updates :)
 5144d3b65a564c148e6ea12969303f58d137449b Merge branch 'master' into module-support
-ef34638f5d24c07a5582cbb60755fd4dfbec9a79 Updated docs for external server information.
-67f4b0f31538832f06b9351d15e30c85f449ac7e Modules are now instanciated with the package name.
-2f181e19496a1fe693d9b20260fe961bb406c53b Removed unused package_name attribute
