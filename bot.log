@@ -3637,6 +3637,3 @@ a9bb965b6dcd931cefdc7dd05fa4c672b5dff69c add a decorator to add custom template 
 58fa088abc0f0e511d934e822f917b796d418bb3 Added missing file (fileupload docs)
 85d43079d137c3f15e3ed7a9545ba2db92718194 Added missing file (fileupload docs)
 c21caa5047f966aa5f6a3d0e5e4611abd44ae861 Merge branch 'master' into module-support
-0c54d0a0e5dfec25cd60329e09622d42905d0969 Added pattern for file uploads.
-0da39c76e3c67293aef2234b43aff8728d9002eb More documentation updates :)
-5144d3b65a564c148e6ea12969303f58d137449b Merge branch 'master' into module-support
