@@ -1,3 +1,5 @@
+d887d32f4d0effedb6bf40f3d2ad790036934387 Merge pull request #3880 from elliott-king/patch-2
+7068d0983a29eb411bcd361ef8b764a8d10684ed Clarify json error handling
 7f206913e1ec078cebaa590f66c6d137d15bdca9 Merge pull request #3866 from greyli/improve-readme-example
 c676c2c4f381e8eec3932d8bd53fdbafda70aef7 Merge pull request #3861 from greyli/fix-pytest
 54ae1cb0e902aac1bce44e2a315650d395c710b5 Update the example in README
@@ -3632,6 +3634,3 @@ d22428bc8e8c3cf5e6006497cb8164decde31924 Updated Makefile to also upload and bui
 3ac4ec670c881668aaedb2c3937bae5e10984988 Beefed up PDF docs.  They actually look like something now.
 36e24299e35cd0c6a593d9eea3130a7737a15eea Merge branch 'master' into module-support
 4395e9493cc33d49b53889f9f726458f05f1a475 add tests for template_filter using a real template
-5c9ef2c44dce5afc99a0b3b539ebaafe9b8ce3c5 the template_filter now expects the parentheses
-a9bb965b6dcd931cefdc7dd05fa4c672b5dff69c add a decorator to add custom template filter
-58fa088abc0f0e511d934e822f917b796d418bb3 Added missing file (fileupload docs)
