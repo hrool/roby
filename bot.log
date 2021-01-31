@@ -3631,6 +3631,3 @@ f1603d33f266ab24eda604f76632fa604b91e3f9 Docs mention query args now.  This fixe
 f419937d2c5f2db16a8157a0a061b92c38876649 License after API docs
 606b006e2391d12fec5313ce606d82463d7aad07 Fixed at least one build warning by renaming files.
 d22428bc8e8c3cf5e6006497cb8164decde31924 Updated Makefile to also upload and build pdf docs.
-3ac4ec670c881668aaedb2c3937bae5e10984988 Beefed up PDF docs.  They actually look like something now.
-36e24299e35cd0c6a593d9eea3130a7737a15eea Merge branch 'master' into module-support
-4395e9493cc33d49b53889f9f726458f05f1a475 add tests for template_filter using a real template
