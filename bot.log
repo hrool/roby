@@ -1,3 +1,35 @@
+192f4ae0b2a4e7d73c0b0472e53e33250175d786 Merge pull request #3895 from pallets/jinja-tojson
+b473e7c97c7c557e64fb84236c7d346b6ad16736 use Jinja's tojson filter
+fdf5d11b515aa2d0937ccc31ef7f20b94d3a8794 Merge pull request #3794 from mbpreble/open-session-request-endpoint-none
+01621485fdad733b0886117d59bea1adac8d4fcc Ensure session_interface.open_session is called after URL matching (#3776)
+15f0fc2d24a6e5cc35216b81b360be6ab89a7a4c Merge pull request #3883 from tonydelanuez/clarify-got-request-exception
+451c1f87f39253c35360f3e9e004df19e0c74638 got_request_exception only sends unhandled exceptions
+6355f121761a79e878d3b96b82d097196341271a Merge pull request #3893 from pallets/pre-commit-ci-update-config
+d55ee5b91759c411d90ebb2046466fb27640d5ff [pre-commit.ci] pre-commit autoupdate
+93261454e6d0bc1c3c7bea5c69a3cbd2846984b6 Merge pull request #3887 from pallets/dependabot/pip/packaging-20.9
+fb5f04a8c71499391bab37aa4004ecc652724e0d Bump packaging from 20.8 to 20.9
+8b28c218c93a79780b5d6182ca8433da2f2fac7f Merge pull request #3886 from pallets/dependabot/pip/jinja2-2.11.3
+6c828c3bbae18d10844524046f63fb3a26807dea Merge pull request #3889 from pallets/dependabot/pip/pytest-6.2.2
+e783424fbb207a7ea1656cb906e02e1185d7883a Merge pull request #3888 from pallets/dependabot/pip/sphinx-3.4.3
+510268e91415aa2e759436eb148bfd5e12f313e5 Bump pytest from 6.2.1 to 6.2.2
+096ac67b97f5ca5f3ccd44f45847cf341a3e1c32 Merge pull request #3891 from pallets/dependabot/pip/greenlet-1.0.0
+296bd2f4cc0141db11629d1339359771cc4eba38 Bump jinja2 from 2.11.2 to 2.11.3
+7eebe22cf517702cd26a18ae95e75e83ec587cc5 Bump sphinx from 3.4.1 to 3.4.3
+d1b36ced14f15747554594567f133b8fad28ceac Merge pull request #3892 from pallets/dependabot/pip/pre-commit-2.10.0
+963f68abf43a4dc22aae2e6cededc216feaa4366 Merge pull request #3890 from pallets/dependabot/pip/sphinx-tabs-2.0.0
+c52ffa8ae7252a45b14e8cfa53b0fe5988210388 Bump sphinx-tabs from 1.3.0 to 2.0.0
+5ecbf1e3337e7622b6508791b6c095cf91b7c544 Bump greenlet from 0.4.17 to 1.0.0
+b379bd4a781ed09c8f2d8d0756fb4bed1cc598a8 Bump pre-commit from 2.9.3 to 2.10.0
+557e2147dd9c61a4f8ee5cab1d51c1bc355bc5f3 Merge pull request #3885 from pallets/dependabot/pip/tox-3.21.3
+78bcf1d8c6e9a63ea818d2febaa56c4878e90db6 Bump tox from 3.20.1 to 3.21.3
+9f7ac04aaf008305770b04ec64b671e916994749 Merge pull request #3894 from pallets/update-werkzeug
+81ba6c24efea58dd00c093448fa2e529c0cda507 remove Jinja 'autoescape' and 'with' extensions
+055cdc2625c0cdf8cea87524f5c6bcf07f7e5005 click detects program name when run as module
+64206c13c2bff0220328845db0995f451cefd3b1 simplify InternalServerError.original_exception
+eb42655c46f8a598f2e0ead624ba5a65a8a66e90 simplify BadRequestKeyError.show_exception
+14f56363a4992506f2b3670985fca4f0a29e5176 rename send_file add_etags to etag
+1936ca8a2e1789efd6169a901a8b60ec62ceb578 remove BaseRequest and BaseResponse
+fdba0d2526347786c05c15027e183a5ba4d81114 remove JSONMixin
 d887d32f4d0effedb6bf40f3d2ad790036934387 Merge pull request #3880 from elliott-king/patch-2
 7068d0983a29eb411bcd361ef8b764a8d10684ed Clarify json error handling
 7f206913e1ec078cebaa590f66c6d137d15bdca9 Merge pull request #3866 from greyli/improve-readme-example
@@ -3626,5 +3658,3 @@ f1603d33f266ab24eda604f76632fa604b91e3f9 Docs mention query args now.  This fixe
 36717b02731ad7d86ba8effbe27e70405e48cd9b Added support for long running sessions.  This closes #16.
 2ba88eefb54f76fc974181babac07ffc7c1f7e73 Fixed simple typo
 13933eeaf8b6c7685aaf1c769efe97763d64ea0d Merge branch 'master' into module-support
-4559e4f0f14272fb4fb31f3bf79bf592a9f781df Added docs on caching and decorators.
-41de12984495198423cbce73ac059ccee0fbfd30 Merge branch 'master' into module-support
