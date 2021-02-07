@@ -3655,6 +3655,3 @@ a7266ffb90d109f94da96e9eea5f5bb4ff8ddc71 Added @templated decorator to the patte
 8d49440d8b881b2df2c10085a58d3a4e4085147e Added example for context bound objects to the testing docs.  This fixes #18
 a9284afde97c30d136e8ec675794c7cdcf4ca277 Fixed typo in tutorial.  This fixes #19
 f1603d33f266ab24eda604f76632fa604b91e3f9 Docs mention query args now.  This fixes #20
-36717b02731ad7d86ba8effbe27e70405e48cd9b Added support for long running sessions.  This closes #16.
-2ba88eefb54f76fc974181babac07ffc7c1f7e73 Fixed simple typo
-13933eeaf8b6c7685aaf1c769efe97763d64ea0d Merge branch 'master' into module-support
