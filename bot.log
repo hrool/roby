@@ -1,3 +1,13 @@
+adeaf27e767f7bd37996d999eba135d63e890408 Merge pull request #3904 from pallets/update-project
+b496d8b7cb72f29dc91d2859829caedae25d62ea update contributing guide
+3c00658772983f95016d300a87951da45e8d0701 update requirements
+dbe76bb75d597401d33ef428d79540797e9297b3 add security policy
+571e638e2accf8cff6682227a564ffd5deac7e67 update issue templates
+bfd4dc6d3065b87130b246f377cfc250fecec58b update test config
+ee089488ad948dfeac4cddd53ae0f07935ed2ab5 Merge pull request #3901 from pallets/pre-commit-ci-update-config
+3fe23bf899d3454eb7e7fd1eb0b7a812497cd365 [pre-commit.ci] pre-commit autoupdate
+ff3fb96896ef2814b695c0689009434368ca9ca3 Merge pull request #3903 from pallets/update-werkzeug
+0ee1b0b5d9712b6cf2f22429db98549e1a0c8cb8 remove test relying on Werkzeug Local internals
 192f4ae0b2a4e7d73c0b0472e53e33250175d786 Merge pull request #3895 from pallets/jinja-tojson
 b473e7c97c7c557e64fb84236c7d346b6ad16736 use Jinja's tojson filter
 fdf5d11b515aa2d0937ccc31ef7f20b94d3a8794 Merge pull request #3794 from mbpreble/open-session-request-endpoint-none
@@ -3654,4 +3664,3 @@ eeb0e949518720ff5302bcf336fc72dea44737d0 Fixed merging confict
 a7266ffb90d109f94da96e9eea5f5bb4ff8ddc71 Added @templated decorator to the patterns.
 8d49440d8b881b2df2c10085a58d3a4e4085147e Added example for context bound objects to the testing docs.  This fixes #18
 a9284afde97c30d136e8ec675794c7cdcf4ca277 Fixed typo in tutorial.  This fixes #19
-f1603d33f266ab24eda604f76632fa604b91e3f9 Docs mention query args now.  This fixes #20
