@@ -3662,5 +3662,3 @@ d0eefb01d16bd058172363a9847b5d98ccd1abc9 Added link to snippets website to the p
 7e1db5978c3c7aedcb43d7e2036edc85b0a22a6b Added module support to templated decorator.
 eeb0e949518720ff5302bcf336fc72dea44737d0 Fixed merging confict
 a7266ffb90d109f94da96e9eea5f5bb4ff8ddc71 Added @templated decorator to the patterns.
-8d49440d8b881b2df2c10085a58d3a4e4085147e Added example for context bound objects to the testing docs.  This fixes #18
-a9284afde97c30d136e8ec675794c7cdcf4ca277 Fixed typo in tutorial.  This fixes #19
