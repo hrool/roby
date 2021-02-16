@@ -15,15 +15,6 @@ Application Object
 
 .. autoclass:: Flask
    :members:
-   :inherited-members:
-
-
-Module Objects
---------------
-
-.. autoclass:: Module
-   :members:
-   :inherited-members:
 
 Incoming Request Data
 ---------------------
