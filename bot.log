@@ -1,3 +1,4 @@
+aee3f3fee974ffb8e2ed7848c9e5744df5d7a5de Merge pull request #3916 from greyli/fix-extdev-docs
 adeaf27e767f7bd37996d999eba135d63e890408 Merge pull request #3904 from pallets/update-project
 b496d8b7cb72f29dc91d2859829caedae25d62ea update contributing guide
 3c00658772983f95016d300a87951da45e8d0701 update requirements
@@ -3658,5 +3659,3 @@ ce53d10236279e4798365d991ab4ff838cb16d36 Merge branch 'master' into module-suppo
 9248a7baca5bc616a60f9b63b525e872fbfddef2 None responses fail properly now.  This fixes #24
 d0eefb01d16bd058172363a9847b5d98ccd1abc9 Added link to snippets website to the patterns docs.
 36f659b82b9079ec8492c1b52a0c0b058ebdf2eb Merge branch 'master' into module-support
-75461c1467bbb2d83ee787bb13f4a338a4b8ad3e Added _external support to url_for
-7e1db5978c3c7aedcb43d7e2036edc85b0a22a6b Added module support to templated decorator.
