@@ -3656,6 +3656,3 @@ bc0c0559e384dc88441775a3907487f4a2b515b4 Added OpenID example
 f345af8d9d33e6164747c865c29a72186a470c22 Use unicode in SQLAlchemy pattern.
 dffb3d091c0e42b7254fe88218811c24c0054f7e Removed useless import and adapted tests
 ce53d10236279e4798365d991ab4ff838cb16d36 Merge branch 'master' into module-support
-9248a7baca5bc616a60f9b63b525e872fbfddef2 None responses fail properly now.  This fixes #24
-d0eefb01d16bd058172363a9847b5d98ccd1abc9 Added link to snippets website to the patterns docs.
-36f659b82b9079ec8492c1b52a0c0b058ebdf2eb Merge branch 'master' into module-support
