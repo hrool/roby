@@ -1,4 +1,9 @@
+dcd3b5c8f86c70c34a4487a943300cbf6adce9aa Merge pull request #3922 from pallets/consistency
+0c7cbe2d1186f53efcd0da0589a2eaf0382e4d39 move version to setup.cfg
+9e7d3a6b694b27f997266889ae463e06dd83a189 docs rename changelog to changes
+3cd615a1d6db7e319c27bca2499ab7390065f090 update project links
 aee3f3fee974ffb8e2ed7848c9e5744df5d7a5de Merge pull request #3916 from greyli/fix-extdev-docs
+8d9501598ff066706c1300a9f6f5193912f2cb4d use rtd to build docs for prs
 adeaf27e767f7bd37996d999eba135d63e890408 Merge pull request #3904 from pallets/update-project
 b496d8b7cb72f29dc91d2859829caedae25d62ea update contributing guide
 3c00658772983f95016d300a87951da45e8d0701 update requirements
@@ -3655,4 +3660,3 @@ bc0c0559e384dc88441775a3907487f4a2b515b4 Added OpenID example
 9da5795d79196e13d802915509180118809042a7 Merge branch 'master' into module-support
 f345af8d9d33e6164747c865c29a72186a470c22 Use unicode in SQLAlchemy pattern.
 dffb3d091c0e42b7254fe88218811c24c0054f7e Removed useless import and adapted tests
-ce53d10236279e4798365d991ab4ff838cb16d36 Merge branch 'master' into module-support
