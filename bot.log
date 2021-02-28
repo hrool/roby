@@ -1,3 +1,5 @@
+4846e25e92638a1db5aa2b41f65eed7585366109 Merge pull request #3917 from greyli/fix-date-parse
+49b7341a491e01cd6a08238ca63bd46ae53a009f update json.dumps for http_date changes
 dcd3b5c8f86c70c34a4487a943300cbf6adce9aa Merge pull request #3922 from pallets/consistency
 0c7cbe2d1186f53efcd0da0589a2eaf0382e4d39 move version to setup.cfg
 9e7d3a6b694b27f997266889ae463e06dd83a189 docs rename changelog to changes
@@ -3659,4 +3661,3 @@ bc0c0559e384dc88441775a3907487f4a2b515b4 Added OpenID example
 67fc46526234653b0a519e9f1e8a05a2c40c80f8 Fix typo, remove useless import, limit lines to 79 columns.
 9da5795d79196e13d802915509180118809042a7 Merge branch 'master' into module-support
 f345af8d9d33e6164747c865c29a72186a470c22 Use unicode in SQLAlchemy pattern.
-dffb3d091c0e42b7254fe88218811c24c0054f7e Removed useless import and adapted tests
