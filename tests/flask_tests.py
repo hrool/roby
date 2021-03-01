@@ -16,7 +16,6 @@ import sys
 import flask
 import unittest
 import tempfile
-import warnings
 from datetime import datetime
 from werkzeug import parse_date
 
@@ -61,7 +60,7 @@ class BasicFunctionalityTestCase(unittest.TestCase):
         assert sorted(rv.allow) == ['GET', 'HEAD']
         rv = c.head('/')
         assert rv.status_code == 200
-        assert not rv.data # head truncates
+        assert not rv.data  # head truncates
         assert c.post('/more').data == 'POST'
         assert c.get('/more').data == 'GET'
         rv = c.delete('/more')
@@ -85,7 +84,7 @@ class BasicFunctionalityTestCase(unittest.TestCase):
         assert sorted(rv.allow) == ['GET', 'HEAD']
         rv = c.head('/')
         assert rv.status_code == 200
-        assert not rv.data # head truncates
+        assert not rv.data  # head truncates
         assert c.post('/more').data == 'POST'
         assert c.get('/more').data == 'GET'
         rv = c.delete('/more')
@@ -191,7 +190,7 @@ class BasicFunctionalityTestCase(unittest.TestCase):
             flask.abort(404)
         @app.route('/error')
         def error():
-            1/0
+            1 // 0
         c = app.test_client()
         rv = c.get('/')
         assert rv.status_code == 404
@@ -236,7 +235,8 @@ class BasicFunctionalityTestCase(unittest.TestCase):
             def to_python(self, value):
                 return value.split(',')
             def to_url(self, value):
-                return ','.join(super(ListConverter, self).to_url(x) for x in value)
+                base_to_url = super(ListConverter, self).to_url
+                return ','.join(base_to_url(x) for x in value)
         app = flask.Flask(__name__)
         app.url_map.converters['list'] = ListConverter
         @app.route('/<list:args>')
@@ -297,10 +297,11 @@ class JSONTestCase(unittest.TestCase):
 
     def test_template_escaping(self):
         app = flask.Flask(__name__)
+        render = flask.render_template_string
         with app.test_request_context():
-            rv = flask.render_template_string('{{ "</script>"|tojson|safe }}')
+            rv = render('{{ "</script>"|tojson|safe }}')
             assert rv == '"<\\/script>"'
-            rv = flask.render_template_string('{{ "<\0/script>"|tojson|safe }}')
+            rv = render('{{ "<\0/script>"|tojson|safe }}')
             assert rv == '"<\\u0000\\/script>"'
 
 
@@ -381,6 +382,66 @@ class TemplatingTestCase(unittest.TestCase):
         assert rv.data == 'dcba'
 
 
+class ModuleTestCase(unittest.TestCase):
+
+    def test_basic_module(self):
+        app = flask.Flask(__name__)
+        admin = flask.Module(__name__, 'admin', url_prefix='/admin')
+        @admin.route('/')
+        def index():
+            return 'admin index'
+        @admin.route('/login')
+        def login():
+            return 'admin login'
+        @admin.route('/logout')
+        def logout():
+            return 'admin logout'
+        @app.route('/')
+        def index():
+            return 'the index'
+        app.register_module(admin)
+        c = app.test_client()
+        assert c.get('/').data == 'the index'
+        assert c.get('/admin/').data == 'admin index'
+        assert c.get('/admin/login').data == 'admin login'
+        assert c.get('/admin/logout').data == 'admin logout'
+
+    def test_request_processing(self):
+        catched = []
+        app = flask.Flask(__name__)
+        admin = flask.Module(__name__, 'admin', url_prefix='/admin')
+        @admin.before_request
+        def before_admin_request():
+            catched.append('before-admin')
+        @admin.after_request
+        def after_admin_request(response):
+            catched.append('after-admin')
+            return response
+        @admin.route('/')
+        def index():
+            return 'the admin'
+        @app.before_request
+        def before_request():
+            catched.append('before-app')
+        @app.after_request
+        def after_request(response):
+            catched.append('after-app')
+            return response
+        @app.route('/')
+        def index():
+            return 'the index'
+        app.register_module(admin)
+        c = app.test_client()
+
+        assert c.get('/').data == 'the index'
+        assert catched == ['before-app', 'after-app']
+        del catched[:]
+
+        assert c.get('/admin/').data == 'the admin'
+        assert catched == ['before-app', 'before-admin',
+                           'after-admin', 'after-app']
+
+
 def suite():
     from minitwit_tests import MiniTwitTestCase
     from flaskr_tests import FlaskrTestCase
@@ -392,6 +453,7 @@ def suite():
         suite.addTest(unittest.makeSuite(JSONTestCase))
     suite.addTest(unittest.makeSuite(MiniTwitTestCase))
     suite.addTest(unittest.makeSuite(FlaskrTestCase))
+    suite.addTest(unittest.makeSuite(ModuleTestCase))
     return suite
 
 

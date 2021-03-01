@@ -3660,4 +3660,3 @@ bc0c0559e384dc88441775a3907487f4a2b515b4 Added OpenID example
 720bede150d835be0ffedf4d480482552c90908d Merge branch 'master' into module-support
 67fc46526234653b0a519e9f1e8a05a2c40c80f8 Fix typo, remove useless import, limit lines to 79 columns.
 9da5795d79196e13d802915509180118809042a7 Merge branch 'master' into module-support
-f345af8d9d33e6164747c865c29a72186a470c22 Use unicode in SQLAlchemy pattern.
