@@ -15,15 +15,6 @@ Application Object
 
 .. autoclass:: Flask
    :members:
-   :inherited-members:
-
-
-Module Objects
---------------
-
-.. autoclass:: Module
-   :members:
-   :inherited-members:
 
 Incoming Request Data
 ---------------------
@@ -113,8 +104,8 @@ Incoming Request Data
       ============= ======================================================
       `path`        ``/page.html``
       `script_root` ``/myapplication``
-      `url`         ``http://www.example.com/myapplication/page.html``
-      `base_url`    ``http://www.example.com/myapplication/page.html?x=y``
+      `base_url`    ``http://www.example.com/myapplication/page.html``
+      `url`         ``http://www.example.com/myapplication/page.html?x=y``
       `url_root`    ``http://www.example.com/myapplication/``
       ============= ======================================================
 

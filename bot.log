@@ -1,3 +1,8 @@
+6d9d79c70da0104474564dfed510fc74eef1cb85 Merge pull request #3918 from pgjones/defaultdict
+83d358d2c43c79b7d7fe5365e079447296c65eaf remove _blueprint_order, dicts are ordered
+fd62210f583e90764be6e8d9f295f37f33a65e48 Utilise defaultdicts
+5fea7caba29b872e5b2e3511d1c1732d0fe1ba3e Merge pull request #3907 from pgjones/sugar
+705e52684a9063889c16a289695a2e4429df6887 Add syntatic sugar for route registration
 82d69cd06c7ff738774c5ab7ef48bc6251f5c014 Merge pull request #3926 from pallets/dependabot/pip/sphinx-3.5.1
 e4e66186c319481a162236777b41e52fe269d5ff Merge pull request #3925 from pallets/dependabot/pip/tox-3.22.0
 1748bb02eb29760796c2e6f59e7c9d77ccaeda2e Bump sphinx from 3.4.3 to 3.5.1
@@ -3658,4 +3663,3 @@ b93ec1465be95a8303cbed99589273f562928103 Documented module changes in CHANGES
 745638e774063de206aae930df71789de13e7c73 Added missing decorators for module wide context processors.
 7f837901cb9b3ba7d68ea0a983d86dfc508a9c6d Merge branch 'master' into module-support
 f6da77e894a939b838e02fb744fa3031abfc96ec Fixed URL examples.  This fixes #30.
-a76aabc7f07c06bd155aace787ed811961aacaa7 Merge branch 'master' into module-support

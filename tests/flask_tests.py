@@ -382,75 +382,6 @@ class TemplatingTestCase(unittest.TestCase):
         assert rv.data == 'dcba'
 
 
-class ModuleTestCase(unittest.TestCase):
-
-    def test_basic_module(self):
-        app = flask.Flask(__name__)
-        admin = flask.Module(__name__, 'admin', url_prefix='/admin')
-        @admin.route('/')
-        def index():
-            return 'admin index'
-        @admin.route('/login')
-        def login():
-            return 'admin login'
-        @admin.route('/logout')
-        def logout():
-            return 'admin logout'
-        @app.route('/')
-        def index():
-            return 'the index'
-        app.register_module(admin)
-        c = app.test_client()
-        assert c.get('/').data == 'the index'
-        assert c.get('/admin/').data == 'admin index'
-        assert c.get('/admin/login').data == 'admin login'
-        assert c.get('/admin/logout').data == 'admin logout'
-
-    def test_request_processing(self):
-        catched = []
-        app = flask.Flask(__name__)
-        admin = flask.Module(__name__, 'admin', url_prefix='/admin')
-        @admin.before_request
-        def before_admin_request():
-            catched.append('before-admin')
-        @admin.after_request
-        def after_admin_request(response):
-            catched.append('after-admin')
-            return response
-        @admin.route('/')
-        def index():
-            return 'the admin'
-        @app.before_request
-        def before_request():
-            catched.append('before-app')
-        @app.after_request
-        def after_request(response):
-            catched.append('after-app')
-            return response
-        @app.route('/')
-        def index():
-            return 'the index'
-        app.register_module(admin)
-        c = app.test_client()
-
-        assert c.get('/').data == 'the index'
-        assert catched == ['before-app', 'after-app']
-        del catched[:]
-
-        assert c.get('/admin/').data == 'the admin'
-        assert catched == ['before-app', 'before-admin',
-                           'after-admin', 'after-app']
-
-    def test_late_binding(self):
-        app = flask.Flask(__name__)
-        admin = flask.Module(__name__, 'admin')
-        @admin.route('/')
-        def index():
-            return '42'
-        app.register_module(admin, url_prefix='/admin')
-        assert app.test_client().get('/admin/').data == '42'
-
-
 def suite():
     from minitwit_tests import MiniTwitTestCase
     from flaskr_tests import FlaskrTestCase
@@ -462,7 +393,6 @@ def suite():
         suite.addTest(unittest.makeSuite(JSONTestCase))
     suite.addTest(unittest.makeSuite(MiniTwitTestCase))
     suite.addTest(unittest.makeSuite(FlaskrTestCase))
-    suite.addTest(unittest.makeSuite(ModuleTestCase))
     return suite
 
 
