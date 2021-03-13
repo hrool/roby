@@ -1,3 +1,11 @@
+510c38cc63fd1d88772d6680713c38dd83e277b4 Merge pull request #3933 from pallets/more-scaffold
+3dfc12e8d82a66c4041783fcaec58a7a24dbe348 only extend on first registration
+ef52e3e4a379b16a8b906ff101c6edae71d80dc9 remove redundant _register_error_handler
+25ab05e6a2ae248ab76002807d47c23952492f17 remove old note about InternalServerError
+7029674775023c076a1dc03367214d178423809a rewrite Scaffold docs
+9f7c602a84faa8371be4ece23e4405282d1283d2 move _PackageBoundObject into Scaffold
+3316604822644889a373018490f2534a1dafd9aa Merge pull request #3932 from greyli/set-encoding
+33145c36991c503aeb1e5870c27b720ec80d5079 Set default encoding to UTF-8 for load_dotenv
 6d9d79c70da0104474564dfed510fc74eef1cb85 Merge pull request #3918 from pgjones/defaultdict
 83d358d2c43c79b7d7fe5365e079447296c65eaf remove _blueprint_order, dicts are ordered
 fd62210f583e90764be6e8d9f295f37f33a65e48 Utilise defaultdicts
@@ -3662,4 +3670,3 @@ de909b3bdfcebe6bb56e0910ab9f36ad741b68f2 Merge branch 'master' into module-suppo
 b93ec1465be95a8303cbed99589273f562928103 Documented module changes in CHANGES
 745638e774063de206aae930df71789de13e7c73 Added missing decorators for module wide context processors.
 7f837901cb9b3ba7d68ea0a983d86dfc508a9c6d Merge branch 'master' into module-support
-f6da77e894a939b838e02fb744fa3031abfc96ec Fixed URL examples.  This fixes #30.

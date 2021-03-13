@@ -382,6 +382,98 @@ class TemplatingTestCase(unittest.TestCase):
         assert rv.data == 'dcba'
 
 
+class ModuleTestCase(unittest.TestCase):
+
+    def test_basic_module(self):
+        app = flask.Flask(__name__)
+        admin = flask.Module(__name__, 'admin', url_prefix='/admin')
+        @admin.route('/')
+        def index():
+            return 'admin index'
+        @admin.route('/login')
+        def login():
+            return 'admin login'
+        @admin.route('/logout')
+        def logout():
+            return 'admin logout'
+        @app.route('/')
+        def index():
+            return 'the index'
+        app.register_module(admin)
+        c = app.test_client()
+        assert c.get('/').data == 'the index'
+        assert c.get('/admin/').data == 'admin index'
+        assert c.get('/admin/login').data == 'admin login'
+        assert c.get('/admin/logout').data == 'admin logout'
+
+    def test_request_processing(self):
+        catched = []
+        app = flask.Flask(__name__)
+        admin = flask.Module(__name__, 'admin', url_prefix='/admin')
+        @admin.before_request
+        def before_admin_request():
+            catched.append('before-admin')
+        @admin.after_request
+        def after_admin_request(response):
+            catched.append('after-admin')
+            return response
+        @admin.route('/')
+        def index():
+            return 'the admin'
+        @app.before_request
+        def before_request():
+            catched.append('before-app')
+        @app.after_request
+        def after_request(response):
+            catched.append('after-app')
+            return response
+        @app.route('/')
+        def index():
+            return 'the index'
+        app.register_module(admin)
+        c = app.test_client()
+
+        assert c.get('/').data == 'the index'
+        assert catched == ['before-app', 'after-app']
+        del catched[:]
+
+        assert c.get('/admin/').data == 'the admin'
+        assert catched == ['before-app', 'before-admin',
+                           'after-admin', 'after-app']
+
+    def test_context_processors(self):
+        app = flask.Flask(__name__)
+        admin = flask.Module(__name__, 'admin', url_prefix='/admin')
+        @app.context_processor
+        def inject_all_regualr():
+            return {'a': 1}
+        @admin.context_processor
+        def inject_admin():
+            return {'b': 2}
+        @admin.app_context_processor
+        def inject_all_module():
+            return {'c': 3}
+        @app.route('/')
+        def index():
+            return flask.render_template_string('{{ a }}{{ b }}{{ c }}')
+        @admin.route('/')
+        def index():
+            return flask.render_template_string('{{ a }}{{ b }}{{ c }}')
+        app.register_module(admin)
+        c = app.test_client()
+        assert c.get('/').data == '13'
+        assert c.get('/admin/').data == '123'
+
+    def test_late_binding(self):
+        app = flask.Flask(__name__)
+        admin = flask.Module(__name__, 'admin')
+        @admin.route('/')
+        def index():
+            return '42'
+        app.register_module(admin, url_prefix='/admin')
+        assert app.test_client().get('/admin/').data == '42'
+
+
 def suite():
     from minitwit_tests import MiniTwitTestCase
     from flaskr_tests import FlaskrTestCase
@@ -393,6 +485,7 @@ def suite():
         suite.addTest(unittest.makeSuite(JSONTestCase))
     suite.addTest(unittest.makeSuite(MiniTwitTestCase))
     suite.addTest(unittest.makeSuite(FlaskrTestCase))
+    suite.addTest(unittest.makeSuite(ModuleTestCase))
     return suite
 
 
