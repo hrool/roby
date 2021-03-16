@@ -1,3 +1,5 @@
+020331522be03389004e012e008ad7db81ef8116 Merge pull request #3937 from pallets/pre-commit-ci-update-config
+46d8e90f29d5363239ad02446eaf535c2a6b2308 [pre-commit.ci] pre-commit autoupdate
 510c38cc63fd1d88772d6680713c38dd83e277b4 Merge pull request #3933 from pallets/more-scaffold
 3dfc12e8d82a66c4041783fcaec58a7a24dbe348 only extend on first registration
 ef52e3e4a379b16a8b906ff101c6edae71d80dc9 remove redundant _register_error_handler
@@ -3668,5 +3670,3 @@ f80e1d3b5ab8e718cc67c814cbfd9aee9c95f45f Added note on send_file security.
 34e3d64892f2281aa1b6f6357c345b0a357ee51a Removed theme, this is now refactored to an external reusable theme.
 de909b3bdfcebe6bb56e0910ab9f36ad741b68f2 Merge branch 'master' into module-support
 b93ec1465be95a8303cbed99589273f562928103 Documented module changes in CHANGES
-745638e774063de206aae930df71789de13e7c73 Added missing decorators for module wide context processors.
-7f837901cb9b3ba7d68ea0a983d86dfc508a9c6d Merge branch 'master' into module-support
