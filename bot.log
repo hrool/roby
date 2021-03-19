@@ -3667,6 +3667,3 @@ f80e1d3b5ab8e718cc67c814cbfd9aee9c95f45f Added note on send_file security.
 5bb2b55a2880b3c91dbcd6580f3d25ee23c6655c Explicitly set the pygments style for the PDF
 2d87e9bc37ef1ce8f9068fac92783a4fe3d3d382 Added support for send_file
 4156bd412f2c27359844fbacdae1eb4983c94b8b added theme submodule
-34e3d64892f2281aa1b6f6357c345b0a357ee51a Removed theme, this is now refactored to an external reusable theme.
-de909b3bdfcebe6bb56e0910ab9f36ad741b68f2 Merge branch 'master' into module-support
-b93ec1465be95a8303cbed99589273f562928103 Documented module changes in CHANGES
