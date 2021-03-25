@@ -1,3 +1,5 @@
+ecb3450f19d3d817b4b857bb5831b309131b37e1 Merge pull request #3943 from pallets/pre-commit-ci-update-config
+06fd6aca27cca6eae7ab00379f5ad9300e339d11 [pre-commit.ci] pre-commit autoupdate
 020331522be03389004e012e008ad7db81ef8116 Merge pull request #3937 from pallets/pre-commit-ci-update-config
 46d8e90f29d5363239ad02446eaf535c2a6b2308 [pre-commit.ci] pre-commit autoupdate
 510c38cc63fd1d88772d6680713c38dd83e277b4 Merge pull request #3933 from pallets/more-scaffold
@@ -3661,6 +3663,3 @@ e409bc792d4419ed588afbc60c53b61923c415a7 Fixed typo
 f4269b1fe7fe4c17a99bc7ca0dddafd17bed14e9 Updated logo in the PDF docs
 07581b2404924fe1833f596cfa09caf69868ad5b HEAD is 0.5-dev
 e0fa5aec3a13d9c3e8e27b53526fcee56ac0298d Updated README as well.
-b0ab127015186e1a2918221ffad8d79ca346faf5 Added logo with new slogan
-9fa4f94ad885ea98bad8708da6e3e9d15130bb4d Merge branch 'master' into module-support
-f80e1d3b5ab8e718cc67c814cbfd9aee9c95f45f Added note on send_file security.
