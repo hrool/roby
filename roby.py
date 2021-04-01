@@ -85,7 +85,7 @@ class Response(ResponseBase):
     :meth:`~flask.Flask.make_response` will take care of that for you.
 
     If you want to replace the response object used you can subclass this and
-    set :attr:`~flask.Flask.request_class` to your subclass.
+    set :attr:`~flask.Flask.response_class` to your subclass.
     """
     default_mimetype = 'text/html'
 
@@ -562,7 +562,7 @@ class Module(_PackageBoundObject):
         return f
 
     def context_processor(self, f):
-        """Like :meth:`Flask.context_processor` but for a modul.  This
+        """Like :meth:`Flask.context_processor` but for a module.  This
         function is only executed for requests handled by a module.
         """
         self._record(lambda s: s.app.template_context_processors
@@ -601,7 +601,7 @@ class Flask(_PackageBoundObject):
         app = Flask(__name__)
     """
 
-    #: the class that is used for request objects.  See :class:`~flask.request`
+    #: the class that is used for request objects.  See :class:`~flask.Request`
     #: for more information.
     request_class = Request
 
