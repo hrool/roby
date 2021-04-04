@@ -3656,5 +3656,3 @@ c6e6792cd52022add8455fc792b2ca73c62d3d65 Added MANIFEST.in.  This fixes #39
 b18560fcaa1739c81ff273951ebc6fa3c96fda2b s/will//
 931dcc4c80331d372d70d7a0a5c8e6d49223e2bf Fixed a doc bug and added distribtue docs.
 35ed617fe41b184288892f733ce07d94391b76b1 Added support for flashing categories.
-693e4449f87950c764a928690f4437fd6b1b4d7d Fix typo.
-a5a41d40aaa9f6ed70b487133ddaf48ceb3d054f Fix typo.
