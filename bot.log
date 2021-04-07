@@ -1,3 +1,7 @@
+9ddef0144ff47c74addb87433edb776219eb09da Merge pull request #3955 from pallets/dependabot/pip/urllib3-1.26.4
+285a873ce921c1f2c52f15e1f58bcd3eae39596e [Security] Bump urllib3 from 1.26.3 to 1.26.4
+85b8fab268cda37c18cf77b6de3129da28adeb87 Merge pull request #3952 from pallets/pre-commit-ci-update-config
+70b58c82d9d19932ea3049415a785718e07c830e [pre-commit.ci] pre-commit autoupdate
 ecb3450f19d3d817b4b857bb5831b309131b37e1 Merge pull request #3943 from pallets/pre-commit-ci-update-config
 06fd6aca27cca6eae7ab00379f5ad9300e339d11 [pre-commit.ci] pre-commit autoupdate
 020331522be03389004e012e008ad7db81ef8116 Merge pull request #3937 from pallets/pre-commit-ci-update-config
@@ -3654,5 +3658,3 @@ e7f67e13339073007a84271cce91200bfdb81006 Added logging support.
 8c26bec55c13804a01c11931263c9e9e4dab4afb Added links to downloadable docs in the docs
 c6e6792cd52022add8455fc792b2ca73c62d3d65 Added MANIFEST.in.  This fixes #39
 b18560fcaa1739c81ff273951ebc6fa3c96fda2b s/will//
-931dcc4c80331d372d70d7a0a5c8e6d49223e2bf Fixed a doc bug and added distribtue docs.
-35ed617fe41b184288892f733ce07d94391b76b1 Added support for flashing categories.
