@@ -1,5 +1,11 @@
+1a79d2d235e11d5c2284c8ecfffb9cd192ac769e Merge pull request #3412 from pgjones/async
+dc3e9c0cc36b7945431454ea1543da4e33023bb2 update async docs
+61fbae866478c19ea5f5c3b9b571a4fad0ba7e5c skip async tests if asgiref isn't installed
+00f5a3e55ca3b6dd4e98044ab76f055dc74997ac Alter ensure_sync implementation to support extensions
 9ddef0144ff47c74addb87433edb776219eb09da Merge pull request #3955 from pallets/dependabot/pip/urllib3-1.26.4
 285a873ce921c1f2c52f15e1f58bcd3eae39596e [Security] Bump urllib3 from 1.26.3 to 1.26.4
+c6c6408c3fb96245a2e2afc4b754cdf065fdad47 Raise a runtime error if run_async is called without real ContextVars
+6979265fa643ed982d062f38d386c37bbbef0d9b Add `async` support
 85b8fab268cda37c18cf77b6de3129da28adeb87 Merge pull request #3952 from pallets/pre-commit-ci-update-config
 70b58c82d9d19932ea3049415a785718e07c830e [pre-commit.ci] pre-commit autoupdate
 ecb3450f19d3d817b4b857bb5831b309131b37e1 Merge pull request #3943 from pallets/pre-commit-ci-update-config
@@ -3656,5 +3662,3 @@ b26aeba972686b9cb9a9b111e1bc8997e1f259c8 Fixed a testcase
 ea5e654e9e19aab5089f9a71e679bcca11581e86 Added a documentation chapter about logging
 e7f67e13339073007a84271cce91200bfdb81006 Added logging support.
 8c26bec55c13804a01c11931263c9e9e4dab4afb Added links to downloadable docs in the docs
-c6e6792cd52022add8455fc792b2ca73c62d3d65 Added MANIFEST.in.  This fixes #39
-b18560fcaa1739c81ff273951ebc6fa3c96fda2b s/will//
