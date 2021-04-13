@@ -1,3 +1,7 @@
+85dce2c836fe03aefc07b7f4e0aec575e170f1cd Merge pull request #3957 from pgjones/fix
+6d5ccdefe29292974d0bb8e1d80dcd1a06f28368 Bugfix iscoroutinefunction with Python3.7
+5f03ad3004c41f2e0356f0332ea09e67192c5fab Merge pull request #3958 from pallets/pre-commit-ci-update-config
+08693ae91783bef4f13346d73472b45a40f26c6c [pre-commit.ci] pre-commit autoupdate
 1a79d2d235e11d5c2284c8ecfffb9cd192ac769e Merge pull request #3412 from pgjones/async
 dc3e9c0cc36b7945431454ea1543da4e33023bb2 update async docs
 61fbae866478c19ea5f5c3b9b571a4fad0ba7e5c skip async tests if asgiref isn't installed
@@ -3659,6 +3663,3 @@ b26aeba972686b9cb9a9b111e1bc8997e1f259c8 Fixed a testcase
 7bb0e33a687b3498c401a8dbcf7864d543a1817a Changed target audience section
 54c3df60cd533ea80d347f6715ee84f6a560b5d5 Fixed a doc config error
 267f5f5c82a1ec9966bfb4e1e0c3f7cc4c80ed12 Added a pattern for custom error pages.
-ea5e654e9e19aab5089f9a71e679bcca11581e86 Added a documentation chapter about logging
-e7f67e13339073007a84271cce91200bfdb81006 Added logging support.
-8c26bec55c13804a01c11931263c9e9e4dab4afb Added links to downloadable docs in the docs
