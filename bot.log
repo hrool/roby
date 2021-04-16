@@ -1,3 +1,15 @@
+39887ee4dfafb172312ba7db8c60728dd7181f9f Merge pull request #3964 from pgjones/fix
+5c6a0f0c121297362b4c78e4240dd8445b9d9f12 Fix wrapped view function comparison
+fab26dcbe9215492420d28c47d50167716faaf4f Merge pull request #3963 from pallets/deprecate-helpers
+ec27677f956859fb91c87c4ec7e2766873e67bc0 remove _os_alt_seps
+85b430a3669191ee0d092393f98c0dae47218cab deprecate total_seconds
+f3ed1322a6d28470c259d6948906acd93bddb78b Merge pull request #3962 from pallets/cached-property
+5a7a4ab4c5eed63a23762e09b7e6a739375ad0f0 locked_cached_property subclasses cached_property
+8ab4967703c2f5c500174f46b672d80e32f55d85 consistent versions and deprecation messages
+16f51ef79989e5d7677e8241a438fe37836a994d Merge pull request #3960 from pallets/shell-interactive-hook
+32272da9ac6e16fa22d3401b2d995d5bf3db9492 shell calls sys.__interativehook__
+64213fc0214c1044fa2c9e60d0e2683e75d125c0 Merge pull request #3923 from pgjones/nested
+f92e820b4bf357e9792d08ce398802715a63eafe Nested blueprints
 85dce2c836fe03aefc07b7f4e0aec575e170f1cd Merge pull request #3957 from pgjones/fix
 6d5ccdefe29292974d0bb8e1d80dcd1a06f28368 Bugfix iscoroutinefunction with Python3.7
 5f03ad3004c41f2e0356f0332ea09e67192c5fab Merge pull request #3958 from pallets/pre-commit-ci-update-config
@@ -3660,6 +3672,3 @@ a5421c29acb6bfbd095dbeb4c8180a61bd1d4dab Added documentation for Gunicorn
 c4cac0abc1a04710a25dcfc8d7f1b2de173546a8 Improved configuration support.
 e84140aba2786655bbddcedb363d16de1e285441 Started working on config support
 b26aeba972686b9cb9a9b111e1bc8997e1f259c8 Fixed a testcase
-7bb0e33a687b3498c401a8dbcf7864d543a1817a Changed target audience section
-54c3df60cd533ea80d347f6715ee84f6a560b5d5 Fixed a doc config error
-267f5f5c82a1ec9966bfb4e1e0c3f7cc4c80ed12 Added a pattern for custom error pages.
