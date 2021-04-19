@@ -1,3 +1,13 @@
+03db9194d8d229d04e6a37b14bbe2499d23922d5 Merge pull request #3967 from pgjones/docs
+f74cce164e2065a866bf6d89e53fa5a4b4840cf2 Update documentation on asyncio background tasks
+1c3b53c5db3c9c0f7a1f1650b020e6302705395b Update the docs on serving with ASGI
+34eb0dad154177825885d0b9d895538f26a8aee8 Merge pull request #3965 from pallets/release-2.0.0rc1
+7df5db7b0c78b0588f82f2148b51461f94320b90 release version 2.0.0rc1
+07000942dacaeffa84d9db57ea42570fcfb0395e update minimum install requirements
+afda0ed9f2e8e45b152919573858627a1cc86d3a update deprecated pre-commit hook
+078a3c3631b43e3c85123d7fc44270be6c05a4db update requirements
+e00a4a4b445b07a10ad79b4bfef78d1f57bb3b66 update pallets-sphinx-themes
+6f09b4b5ed9cb63aacd57606159c0dae0c015ae0 Merge remote-tracking branch 'origin/1.1.x' into release-2.0.0rc1
 39887ee4dfafb172312ba7db8c60728dd7181f9f Merge pull request #3964 from pgjones/fix
 5c6a0f0c121297362b4c78e4240dd8445b9d9f12 Fix wrapped view function comparison
 fab26dcbe9215492420d28c47d50167716faaf4f Merge pull request #3963 from pallets/deprecate-helpers
@@ -26,6 +36,8 @@ c6c6408c3fb96245a2e2afc4b754cdf065fdad47 Raise a runtime error if run_async is c
 70b58c82d9d19932ea3049415a785718e07c830e [pre-commit.ci] pre-commit autoupdate
 ecb3450f19d3d817b4b857bb5831b309131b37e1 Merge pull request #3943 from pallets/pre-commit-ci-update-config
 06fd6aca27cca6eae7ab00379f5ad9300e339d11 [pre-commit.ci] pre-commit autoupdate
+1672c5f565c9bba0269e2c5ef3f2cc7038551641 Merge pull request #3939 from kangetsu121/fix_link_and_typo
+6eeaa2e50d2e3ff776085d0b28d58d1db65a0538 fix a broken link
 020331522be03389004e012e008ad7db81ef8116 Merge pull request #3937 from pallets/pre-commit-ci-update-config
 46d8e90f29d5363239ad02446eaf535c2a6b2308 [pre-commit.ci] pre-commit autoupdate
 510c38cc63fd1d88772d6680713c38dd83e277b4 Merge pull request #3933 from pallets/more-scaffold
@@ -3671,4 +3683,3 @@ a5421c29acb6bfbd095dbeb4c8180a61bd1d4dab Added documentation for Gunicorn
 395ff8120ccf055614d03db7d2360ab1182c7c10 Fix typo.
 c4cac0abc1a04710a25dcfc8d7f1b2de173546a8 Improved configuration support.
 e84140aba2786655bbddcedb363d16de1e285441 Started working on config support
-b26aeba972686b9cb9a9b111e1bc8997e1f259c8 Fixed a testcase
