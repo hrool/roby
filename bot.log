@@ -1,3 +1,4 @@
+c791f6312b092678c2a152d0605e49c26831cb05 Fix typo in issue template
 03db9194d8d229d04e6a37b14bbe2499d23922d5 Merge pull request #3967 from pgjones/docs
 f74cce164e2065a866bf6d89e53fa5a4b4840cf2 Update documentation on asyncio background tasks
 1c3b53c5db3c9c0f7a1f1650b020e6302705395b Update the docs on serving with ASGI
@@ -3680,6 +3681,3 @@ aa654128cf72e5a16a480eb59fc1ad551d39f5d9 Added part style
 cbcd15c3b55cfb05f1b27aa2343f909876f8d3d4 Beefed up latex output.  Unfortunately parts look ugly.
 a5421c29acb6bfbd095dbeb4c8180a61bd1d4dab Added documentation for Gunicorn
 854e0e26d16408760072308c44b9160a9fb39abd Fixed some documentation issues. This fixes #41.
-395ff8120ccf055614d03db7d2360ab1182c7c10 Fix typo.
-c4cac0abc1a04710a25dcfc8d7f1b2de173546a8 Improved configuration support.
-e84140aba2786655bbddcedb363d16de1e285441 Started working on config support
