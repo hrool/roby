@@ -1,3 +1,11 @@
+77db3d5ede84bfdc6973154426973886b979f870 Merge pull request #3972 from ThiefMaster/click-7
+1ccf063f80a7f104d6f7ee62fc9bedb4b94b249c Merge pull request #3971 from ThiefMaster/get-root-path
+26a6cc0f94dd25390e2b2d7462bb4a414a862b16 Allow using Click 7 with a DeprecationWarning
+1a8549debb914eecc85cf63034093b55792c7e8f Merge pull request #3973 from pgjones/typing
+b8ddd52a0dffe33d7a083cd949479835d6ae2787 Merge pull request #3974 from pallets/pre-commit-ci-update-config
+b373e7a456f1be4efb6f27c4a21af0dd04260229 [pre-commit.ci] pre-commit autoupdate
+77237093da25438c88b0a74c374a397d4bf823eb Add initial type hints
+f405c6f19e002ae13708cb33f6d48257cc1ea37a Initial typing support
 e6e75e55470a0682ee8370e6d68062e515a248b9 changelog for bumped pallets versions
 c791f6312b092678c2a152d0605e49c26831cb05 Fix typo in issue template
 03db9194d8d229d04e6a37b14bbe2499d23922d5 Merge pull request #3967 from pgjones/docs
@@ -3679,5 +3687,3 @@ ef0dc1800f7558abbefe070f361b97b9161b2452 Added interactive Python docs, fixed pa
 9d98ad5e079b88fd9da87e47d55a11e465ab6bb0 Documented redirect behaviour. Fixes #42
 cc8332e9d99c08b77614e5acd7bd0e6d08dc29b6 Added troubleshooting infos. This fixes #44
 aa654128cf72e5a16a480eb59fc1ad551d39f5d9 Added part style
-cbcd15c3b55cfb05f1b27aa2343f909876f8d3d4 Beefed up latex output.  Unfortunately parts look ugly.
-a5421c29acb6bfbd095dbeb4c8180a61bd1d4dab Added documentation for Gunicorn
