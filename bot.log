@@ -1,3 +1,9 @@
+0c198dffc34f30883d9056c4e42e9858edd06e96 Merge pull request #3985 from greyli/async-note
+ec044a24e10d2bd3c730f69909cd44639b469fd0 Add tips for using async on Windows on Python 3.8
+83b2f8f0f15053561c08c93ffe0de4a8a5adf829 Merge pull request #3984 from pallets/dependabot/pip/pre-commit-2.12.1
+36e6ec45a9885fb1a6a22b0eb15b8810a8712418 Bump pre-commit from 2.12.0 to 2.12.1
+0d63f1021d3608580f86e82448922922bf6300e5 Merge pull request #3983 from pallets/dependabot/add-v2-config-file
+d124214129fd76cd620736f9dadc5e726eb8f34f Upgrade to GitHub-native Dependabot
 77db3d5ede84bfdc6973154426973886b979f870 Merge pull request #3972 from ThiefMaster/click-7
 1ccf063f80a7f104d6f7ee62fc9bedb4b94b249c Merge pull request #3971 from ThiefMaster/get-root-path
 26a6cc0f94dd25390e2b2d7462bb4a414a862b16 Allow using Click 7 with a DeprecationWarning
@@ -3685,5 +3691,3 @@ e432d833b5f7b4c27e2dca5d5125bbf78a46327d Fixed stuff I broke
 6c095deda51efb34cd18bd23411ebd6f2a0cdfe0 Fixed docstring.  This fixes #45
 ef0dc1800f7558abbefe070f361b97b9161b2452 Added interactive Python docs, fixed part style.
 9d98ad5e079b88fd9da87e47d55a11e465ab6bb0 Documented redirect behaviour. Fixes #42
-cc8332e9d99c08b77614e5acd7bd0e6d08dc29b6 Added troubleshooting infos. This fixes #44
-aa654128cf72e5a16a480eb59fc1ad551d39f5d9 Added part style

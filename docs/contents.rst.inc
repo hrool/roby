@@ -14,6 +14,7 @@ web development.
    tutorial/index
    testing
    errorhandling
+   shell
    patterns/index
    deploying/index
    becomingbig
@@ -22,7 +23,7 @@ API Reference
 -------------
 
 If you are looking for information on a specific function, class or
-method, this part of the documentation is for you:
+method, this part of the documentation is for you.
 
 .. toctree::
    :maxdepth: 2
@@ -32,7 +33,7 @@ method, this part of the documentation is for you:
 Additional Notes
 ----------------
 
-Design notes, legal information and changelog are here for the interested:
+Design notes, legal information and changelog are here for the interested.
 
 .. toctree::
    :maxdepth: 2
