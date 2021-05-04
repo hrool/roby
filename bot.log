@@ -1,9 +1,22 @@
+3c9b85469ef4abda1e996a5ec0e7bef0f1a0b394 Merge pull request #3992 from pallets/pre-commit-ci-update-config
+c93a2d76d5874f2cb175b7e91407dc6c877e0139 [pre-commit.ci] pre-commit autoupdate
+d7ac6f5bcf324e7fc588e501b2f18669efd5a12a Merge pull request #3991 from pallets/release-2.0.0rc2
+e2b7d1056c6c8f6f26a4b9dfcc5dc4b2ef87f573 release version 2.0.0rc2
+47f0e799db8d8e379a1fd9bf48ce3a8b7d5bfe73 Merge pull request #3989 from pgjones/async
+2889da67cb15ac6d5d882781d54014286d9ae010 Remove the async helper method
+7f87f3dd93baf45d5f69f02a2dcf4493dfc4a1be Simplify the async handling code
+cb13128cf03b2f1b3c5b48eab518e57e7b5f6516 Remove context copying from run_async function
+188f4785adc4eddd0b185f33b400c2812915624f Merge pull request #3976 from greyli/update-changelog
+8bfce88e39dd427dc1258a04c6b0cafa9667ff3e Minor docs fixes. (#3988)
+98fbb6a3a722b7e3b6fd7152a15f4f234651a821 Merge pull request #3986 from pallets/dependabot/pip/python-dotenv-0.17.1
+467d2e2a437c73fc8eabdd887efe0453663939c3 Bump python-dotenv from 0.17.0 to 0.17.1
 0c198dffc34f30883d9056c4e42e9858edd06e96 Merge pull request #3985 from greyli/async-note
 ec044a24e10d2bd3c730f69909cd44639b469fd0 Add tips for using async on Windows on Python 3.8
 83b2f8f0f15053561c08c93ffe0de4a8a5adf829 Merge pull request #3984 from pallets/dependabot/pip/pre-commit-2.12.1
 36e6ec45a9885fb1a6a22b0eb15b8810a8712418 Bump pre-commit from 2.12.0 to 2.12.1
 0d63f1021d3608580f86e82448922922bf6300e5 Merge pull request #3983 from pallets/dependabot/add-v2-config-file
 d124214129fd76cd620736f9dadc5e726eb8f34f Upgrade to GitHub-native Dependabot
+9be01564f28ed49cbf55049265bd578c7a7257e1 Update changelog for #3932
 77db3d5ede84bfdc6973154426973886b979f870 Merge pull request #3972 from ThiefMaster/click-7
 1ccf063f80a7f104d6f7ee62fc9bedb4b94b249c Merge pull request #3971 from ThiefMaster/get-root-path
 26a6cc0f94dd25390e2b2d7462bb4a414a862b16 Allow using Click 7 with a DeprecationWarning
@@ -3688,6 +3701,3 @@ e432d833b5f7b4c27e2dca5d5125bbf78a46327d Fixed stuff I broke
 9d19b77acf413de77b39ed1c6d972fb1e5fef1c3 Added lazyloading pattern and explicit chapter links in tutorial.
 7829e6ec98f9c84159dcb2aa9fb210b88d97dd33 quickstart docs: Use a real value for secret_key to better illustrate how a secret key should look.
 133920c83bf78db17631b637b8b2ffabcb26f3d4 Fix typo in docs.
-6c095deda51efb34cd18bd23411ebd6f2a0cdfe0 Fixed docstring.  This fixes #45
-ef0dc1800f7558abbefe070f361b97b9161b2452 Added interactive Python docs, fixed part style.
-9d98ad5e079b88fd9da87e47d55a11e465ab6bb0 Documented redirect behaviour. Fixes #42
