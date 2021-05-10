@@ -3696,5 +3696,3 @@ dfecc86dd315586bec8f5f0838195d03ba7165d3 Ported examples over to new config. doc
 68278fd78e15e3ef6a591f3f2b6cc700d1e4d6dd Started working on config support
 e432d833b5f7b4c27e2dca5d5125bbf78a46327d Fixed stuff I broke
 8d356d7cda963e2fa6437c5a5fef035e13cc80c5 Fixed a build error and added a touch icon
-74d458b40c0bdb140e7feab9af407642eb3dcea1 Added versionadded for logger
-1264c458ae808d306aa03c51f70103e52dca107b Document ways to generate secret keys.  This fixes #47.
