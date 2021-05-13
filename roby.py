@@ -19,7 +19,8 @@ from itertools import chain
 from jinja2 import Environment, PackageLoader, FileSystemLoader
 from werkzeug import Request as RequestBase, Response as ResponseBase, \
      LocalStack, LocalProxy, create_environ, SharedDataMiddleware, \
-     ImmutableDict, cached_property, wrap_file, Headers
+     ImmutableDict, cached_property, wrap_file, Headers, \
+     import_string
 from werkzeug.routing import Map, Rule
 from werkzeug.exceptions import HTTPException, InternalServerError
 from werkzeug.contrib.securecookie import SecureCookie
@@ -615,6 +616,105 @@ class Module(_PackageBoundObject):
         self._register_events.append(func)
 
 
+class ConfigAttribute(object):
+    """Makes an attribute forward to the config"""
+
+    def __init__(self, name):
+        self.__name__ = name
+
+    def __get__(self, obj, type=None):
+        if obj is None:
+            return self
+        return obj.config[self.__name__]
+
+    def __set__(self, obj, value):
+        obj.config[self.__name__] = value
+
+
+class Config(dict):
+    """Works exactly like a dict but provides ways to fill it from files
+    or special dictionaries.  There are two common patterns to populate the
+    config.
+
+    Either you can fill the config from a config file::
+
+        app.config.from_pyfile('yourconfig.cfg')
+
+    Or alternatively you can define the configuration options in the
+    module that calls :meth:`from_module` or provide an import path to
+    a module that should be loaded.  It is also possible to tell it to
+    use the same module and with that provide the configuration values
+    just before the call::
+
+        DEBUG = True
+        SECRET_KEY = 'development key'
+        app.config.from_module(__name__)
+
+    In both cases (loading from any Python file or loading from modules),
+    only uppercase keys are added to the config.  The actual keys in the
+    config are however lowercased so they are converted for you.  This makes
+    it possible to use lowercase values in the config file for temporary
+    values that are not added to the config or to define the config keys in
+    the same file that implements the application.
+
+    :param root_path: path to which files are read relative from.  When the
+                      config object is created by the application, this is
+                      the application's :attr:`~flask.Flask.root_path`.
+    :param defaults: an optional dictionary of default values
+    """
+
+    def __init__(self, root_path, defaults=None):
+        dict.__init__(self, defaults or {})
+        self.root_path = root_path
+
+    def from_pyfile(self, filename):
+        """Updates the values in the config from a Python file.  This function
+        behaves as if the file was imported as module with the
+        :meth:`from_module` function.
+
+        :param filename: the filename of the config.  This can either be an
+                         absolute filename or a filename relative to the
+                         root path.
+        """
+        filename = os.path.join(self.root_path, filename)
+        d = type(sys)('config')
+        d.__file__ = filename
+        execfile(filename, d.__dict__)
+        self.from_module(d)
+
+    def from_module(self, module):
+        """Updates the values from the given module.  A module can be of one
+        of the following two types:
+
+        -   a string: in this case the module with that name will be imported
+        -   an actual module reference: that module is used directly
+
+        Just the uppercase variables in that module are stored in the config
+        after lowercasing.  Example usage::
+
+            app.config.from_module('yourapplication.default_config')
+            from yourapplication import default_config
+            app.config.from_module(default_config)
+
+        You should not use this function to load the actual configuration but
+        rather configuration defaults.  The actual config should be loaded
+        with :meth;`from_pyfile` and ideally from a location not within the
+        package because the package might be installed system wide.
+
+        :param module: an import name or module
+        """
+        if isinstance(module, basestring):
+            d = import_string(module).__dict__
+        else:
+            d = module.__dict__
+        for key, value in d.iteritems():
+            if key.isupper():
+                self[key.lower()] = value
+
+    def __repr__(self):
+        return '<%s %s>' % (self.__class__.__name__, dict.__repr__(self))
+
+
 class Flask(_PackageBoundObject):
     """The flask object implements a WSGI application and acts as the central
     object.  It is passed the name of the module or package of the
@@ -648,25 +748,31 @@ class Flask(_PackageBoundObject):
     #: and the development server will no longer serve any static files.
     static_path = '/static'
 
+    #: the debug flag.  Set this to `True` to enable debugging of the
+    #: application.  In debug mode the debugger will kick in when an unhandled
+    #: exception ocurrs and the integrated server will automatically reload
+    #: the application if changes in the code are detected.
+    debug = ConfigAttribute('debug')
+
     #: if a secret key is set, cryptographic components can use this to
     #: sign cookies and other things.  Set this to a complex random value
     #: when you want to use the secure cookie for instance.
-    secret_key = None
+    secret_key = ConfigAttribute('secret_key')
 
     #: The secure cookie uses this for the name of the session cookie
-    session_cookie_name = 'session'
+    session_cookie_name = ConfigAttribute('session_cookie_name')
 
     #: A :class:`~datetime.timedelta` which is used to set the expiration
     #: date of a permanent session.  The default is 31 days which makes a
     #: permanent session survive for roughly one month.
-    permanent_session_lifetime = timedelta(days=31)
+    permanent_session_lifetime = ConfigAttribute('permanent_session_lifetime')
 
     #: Enable this if you want to use the X-Sendfile feature.  Keep in
     #: mind that the server has to support this.  This only affects files
     #: sent with the :func:`send_file` method.
     #:
     #: .. versionadded:: 0.2
-    use_x_sendfile = False
+    use_x_sendfile = ConfigAttribute('use_x_sendfile')
 
     #: the logging format used for the debug logger.  This is only used when
     #: the application is in debug mode, otherwise the attached logging
@@ -686,15 +792,22 @@ class Flask(_PackageBoundObject):
         extensions=['jinja2.ext.autoescape', 'jinja2.ext.with_']
     )
 
+    #: default configuration parameters
+    default_config = ImmutableDict({
+        'debug':                                False,
+        'secret_key':                           None,
+        'session_cookie_name':                  'session',
+        'permanent_session_lifetime':           timedelta(days=31),
+        'use_x_sendfile':                       False
+    })
+
     def __init__(self, import_name):
         _PackageBoundObject.__init__(self, import_name)
 
-        #: the debug flag.  Set this to `True` to enable debugging of
-        #: the application.  In debug mode the debugger will kick in
-        #: when an unhandled exception ocurrs and the integrated server
-        #: will automatically reload the application if changes in the
-        #: code are detected.
-        self.debug = False
+        #: the configuration dictionary as :class:`Config`.  This behaves
+        #: exactly like a regular dictionary but supports additional methods
+        #: to load a config from files.
+        self.config = Config(self.root_path, self.default_config)
 
         #: a dictionary of all view functions registered.  The keys will
         #: be function names which are also used to generate URLs and

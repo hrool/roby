@@ -1,3 +1,26 @@
+d575de5159a6e40944275763c9ada2801214058b Fix typo in the example of nesting bp docs
+22d82e70b3647ed16c7d959a939daf533377382b Merge remote-tracking branch 'origin/2.0.x'
+48325dbfb8a3d38966c62c17ba05882f28070981 Merge pull request #4011 from ThiefMaster/fix-sphinx-build
+2ddbceeaa91b77cd6b837035c5697ac5b94fafab Install sphinx 4.1-dev from git
+19f458f9cd6c56c6d07c1020e1e4ba32b31edc86 Merge remote-tracking branch 'origin/2.0.x'
+15b2241b5173833bc0c9cadaaff9a05fd4e064e2 Merge pull request #4010 from pallets/default-branch
+52adf2ec219a0cb9abcfd116ec104c9a362c602a rename default branch in files
+905e5c23e8c5f6362b38ec1b5526fe999f491229 Merge pull request #4008 from pallets/update-click
+80a4e62096f4010235823180462b4d6e058d025a update click minimum version
+2846abaefed01f1da0d58ca3a83a2a09bea71e9c start version 2.1.0.dev0
+6fb1101f7075b4ff8197f3ef3b9fecfa41dc34ee start version 2.0.1.dev0
+2f0c62f5e6e290843f03c1fa70817c7a3c7fd661 Merge pull request #4007 from pallets/release-2.0.0
+f8e63d39913f9a7bb887066025724569aa3423a6 release version 2.0.0
+1403d35e2a107e0fc693a09898cf605bb18989ad update type annotations
+3a5532b4ed0db5cfd826e7fd2006ede6e873b028 update pallets projects minimum versions
+f8f0caf5c6e560b8e7fd322cbfd140c2bf7aa61b update requirements
+9c1e7f6cdc6916d268aa9c44d46c06f5769fdcf0 Merge pull request #4005 from pallets/pre-commit-ci-schedule
+8b72f6abd72b32225299c57c981180df35a89547 update pre-commit monthly
+28262c34c67eb1adeefb847c27b8cefa090970fa Merge pull request #3999 from greyli/improve-cli-docs
+2c88e8a0aa7ee724b844cbe48013a1e7314e9049 Merge pull request #4003 from pallets/autodoc-typehints
+79ac96f1239601eb12f6f69fcb3ce6cb269ac5fb show type hints in description
+e1b3a053ba426e5b1aa7bd2af138e03c7f303592 Merge pull request #4002 from pallets/pre-commit-ci-update-config
+95e5843ad51b025098ee33acbf273bafef26a1d8 [pre-commit.ci] pre-commit autoupdate
 3c9b85469ef4abda1e996a5ec0e7bef0f1a0b394 Merge pull request #3992 from pallets/pre-commit-ci-update-config
 c93a2d76d5874f2cb175b7e91407dc6c877e0139 [pre-commit.ci] pre-commit autoupdate
 d7ac6f5bcf324e7fc588e501b2f18669efd5a12a Merge pull request #3991 from pallets/release-2.0.0rc2
@@ -3694,5 +3717,3 @@ dfecc86dd315586bec8f5f0838195d03ba7165d3 Ported examples over to new config. doc
 35fd6eb22c4dec893770dd5720a51608a06fb8cd Use uppercase for config and support any object.
 4d16486132c349cdc7d473ef3c238dfa3f9d5385 Improved configuration support.
 68278fd78e15e3ef6a591f3f2b6cc700d1e4d6dd Started working on config support
-e432d833b5f7b4c27e2dca5d5125bbf78a46327d Fixed stuff I broke
-8d356d7cda963e2fa6437c5a5fef035e13cc80c5 Fixed a build error and added a touch icon
