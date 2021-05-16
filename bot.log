@@ -1,4 +1,37 @@
+9039534eee6a87da98a1dee9e4338d1b73e861f8 Merge pull request #4055 from pallets/converter-session
+a7b02b3a07ae292ce376df2459eae3ffb4c06d52 converters have access to session
+636f195bb538864053bd0cc8b37844818a1fcd3d Merge branch '2.0.x'
+864875099762fd0209bacbb26985ce2bcd7f2ec0 Merge branch '1.1.x' into 2.0.x
+1ca199f9b38b70a4e97cb47a4252ffd7fccc008c Merge pull request #4051 from pallets/release-1.1.4
+64a5d7a018aadcb5d7d868a782a04d1b599ef89b release version 1.1.4
+5f8d3ea2fcb4a17373653d900b060259fefb11bb Merge pull request #4049 from brettlangdon/fix.os.fspath
+3ace642ef32eae3fa096bef85a87545eba3f53fc Use compat fspath instead of os.fspath When 7ba35c4 was cherry-picked it introduced the usage of os.fspath which is not supported on Python <3.6
+1ce0f774c947ee39924cf6604e444b23c51e4cec Merge branch '2.0.x'
+5bd959fbec98cb14c785868e8890d6850971038e Merge branch '1.1.x' into 2.0.x
+c04b0de558fe8e1ccb8edb4525d40e725ae9a24d Merge pull request #4048 from pallets/release-1.1.3
+661bbcdb90ee82baded66ae0733cb87ea5f464ef release version 1.1.3
+ae647b5750192c7590f176ab4d7e16b44bb50ea6 Merge pull request #4047 from pallets/maximum-versions
+6d8b4ce9d037937ef8694067ab5754666240d097 set maximum versions of pallets dependencies
+4240ace59710d86c478111affd4ad6fb4c8cad9e Merge remote-tracking branch 'origin/2.0.x'
+f3551c8b907d468b6dc8a11a14384333d6126014 Merge pull request #4036 from greyli/fix-nesting-bp
+e93704fbfd5f40e48f8fe9034b6b0fe420d28fb3 fix url_prefix argument when nesting blueprints
+08e459e823235eecd86c635653f4bd6d6003c2b3 Merge pull request #4045 from pallets/blueprint-name-dot
+7c5261407dae61679c268b44c63d73909c3fe652 blueprint name may not contain a dot
+d8c37f43724cd9fb0870f77877b7c4c7e38a19e0 Merge pull request #4026 from greyli/improve-type-hints
+d5aadba4d34f6070377e88429b178ba08eea5349 improve type hints for send_file and send_from_directory
+6414df97562e623221c1ee2072d38e84f87b02d9 Merge pull request #4042 from pallets/update-typing
+25884c433f1eddf4537694d4c5f9f78cd9a14955 fix typing that wasn't available in Python 3.6.0
+6fe7f45725dd0fc94fb3ce7ab3b3ff477b10401a inform mypy that g has arbitrary attributes
+2baaa8fd8ebdd0f7bf7a24bff4855ef53476c92d fix annotation for g object
+89475e5d1e3e25ce56c9d9411496528f4a1ba82b mark top-level names as exported
+c121e8cea7624a764e7cfa97cc9e94f261050e10 Merge pull request #4034 from oleksis/2.0.x
+14921608871f15f8c34d48026473293e225ad608 Fix Fork link
+d906c71e99b0d6004490b4c68d249dade898e9c5 Merge pull request #4019 from greyli/re-add-filename
+fc82dd50e39700b14799df17578e2497b8f0248c Re-add filename param for send_from_directory
+80d9519a9c6f6e84d93432a675326da0a983bd46 Merge pull request #4021 from andrewjroth/patch-1
+2889ea4dd9bfee0d4b63a435c5a8d20337770f9c Added Google Cloud Run as a Hosted option
 d575de5159a6e40944275763c9ada2801214058b Fix typo in the example of nesting bp docs
+57b19fda540b596cd211ac864362485e09be203b Fix typo in the example of nesting bp docs
 22d82e70b3647ed16c7d959a939daf533377382b Merge remote-tracking branch 'origin/2.0.x'
 48325dbfb8a3d38966c62c17ba05882f28070981 Merge pull request #4011 from ThiefMaster/fix-sphinx-build
 2ddbceeaa91b77cd6b837035c5697ac5b94fafab Install sphinx 4.1-dev from git
@@ -3715,5 +3748,3 @@ dfecc86dd315586bec8f5f0838195d03ba7165d3 Ported examples over to new config. doc
 78fc9949aa7055f2e14825cec3c28bc35c42700f Merge branch 'master' into config-support
 99c6287ce2319224f3a188f75641a9443466ab85 appengine -> app engine
 35fd6eb22c4dec893770dd5720a51608a06fb8cd Use uppercase for config and support any object.
-4d16486132c349cdc7d473ef3c238dfa3f9d5385 Improved configuration support.
-68278fd78e15e3ef6a591f3f2b6cc700d1e4d6dd Started working on config support
