@@ -3745,6 +3745,3 @@ ce6e4cbd73d57cb8c1bba85c46490f71061f865f 0.5 is 0.3 now, why skip numbers?
 dfecc86dd315586bec8f5f0838195d03ba7165d3 Ported examples over to new config. documented upgrading
 02b916d509422a4703df5110110686288666d3d5 Added appfactory pattern
 182ee31503ea8a9eefd0d7063bd7fbdde991e13b Added chapter about config
-78fc9949aa7055f2e14825cec3c28bc35c42700f Merge branch 'master' into config-support
-99c6287ce2319224f3a188f75641a9443466ab85 appengine -> app engine
-35fd6eb22c4dec893770dd5720a51608a06fb8cd Use uppercase for config and support any object.
