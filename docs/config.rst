@@ -1,7 +1,9 @@
+.. _config:
+
 Configuration Handling
 ======================
 
-.. versionadded:: 0.5
+.. versionadded:: 0.3
 
 Applications need some kind of configuration.  There are different things
 you might want to change.  Like toggling debug mode, the secret key and a
@@ -46,6 +48,8 @@ Builtin Configuration Values
 ----------------------------
 
 The following configuration values are used internally by Flask:
+
+.. tabularcolumns:: |p{6.5cm}|p{8.5cm}|
 
 =============================== =========================================
 ``DEBUG``                       enable/disable debug mode

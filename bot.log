@@ -1,3 +1,41 @@
+7161776824734fc2797fe2b4fc974d183487ebf8 Merge branch '2.0.x'
+e22021d531499af87f65d75f1e37e6329e7385ed start version 2.0.2.dev0
+bc90801c2ada42d3cf112a3b5701bfdbb8b6211c Merge pull request #4091 from pallets/release-2.0.1
+fe2d744b530283094dd0a2ffa4a9d86f1029b2cd release version 2.0.1
+9f606a8cbb8755eaa4664ce7a4f892204f140410 Merge pull request #4090 from pallets/stream-type
+7ab934f6bc2380a322c77d92c0b6cfd10b7de991 improve typing for `stream_with_context`
+6b1c4e9769cbe72d6f5665a8081a98e5a671a8d8 Merge pull request #4087 from greyli/gitignore
+255461d8950fab51a44c84f33cfba1e4fb239a7d Merge pull request #4074 from pgjones/bp
+3257b7574e7f010686a617197e0fb4596986f7f7 Fix blueprint renaming
+714b0a467acab54091d8aeb73403d808abfbcf5b Fix blueprint self registration
+9409be6e34e153bfdb0aac2c9eb7f60110109172 warn when registering same blueprint with same name
+63b306743fccdd52079034e82cbbeee182a4361d changelog for blueprint registered name
+67b0b7e30d2304f628e966896748032022ac0257 cache blueprint path calculation
+c2920e2bd98cdb3dcccc2868c25b695d4780c620 Bugfix allow blueprints to be registered with a different name
+141fde1d8ec8663b4be98777750d2f58c6fe44ad Bugfix blueprint naming
+99afbb277d25d3b052e00b9a8da216054d51d62a Fix blueprint nested url_prefix
+a541c2ac8b05c2b23e11bd8540088fce1abc2373 Fix view decorators docs
+36872e7bd45162dc78e789f45e026932a4687434 Add venv and .venv to .gitignore
+a82cc31af847de7250cd489f6080802ce3f5236e Update CHANGES.rst
+10a36cb60e10594aa5dbf3c5aba6abbd5f6fcd70 Improve decorator factory type signatures
+8796b2a784bc45fcc6865cd80b2cba0601448727 Use TypeVar for setupmethod()
+bf982718cf30615f2dd17fa71fe17d565ebb1d3e Make add_url_rule() signature consistent
+0d594b8c0f13c70507aa61a7666c844c5e2aeda0 Add update pip and setuptools section (#4061)
+83f7efa04708a22c9701488f0f29b59c2b756bef Merge branch '2.0.x'
+0cfce9a0ec62795091af6f548cf3ca45f0dac448 Merge pull request #4084 from pallets/update-theme
+9889ca8bcabbb1b1290ca4403b0242e01bae4c47 update pallets and sphinx requirements
+cfda27089932a102953da73fdab17cf9814334e4 update pallets-sphinx-themes
+69e6d59ac8dd5ba6a5242acafa5b50c7b56c84d1 Merge pull request #4081 from pallets/config-json
+10425fb9b13d977128f18c1051fb93edc9aee2de re-add deprecated Config.from_json method
+b5518e23f5b85ba6e069a8151ed42209947f3849 Merge pull request #4072 from pallets/typeshed
+afc907fd0d4a4e96398829d75ded9711a3046070 use _typeshed.wsgi instead of wsgiref.types
+19b905eeef7e47841318ec9e455c9369770f22e2 Merge pull request #4066 from dannysepler/pathlib-in-test
+1b5f21e015e2c4f36fcdb34a09ce93787d59e181 Add pathlib in cli tests
+1c3052377b18055cbfbbbdd297dd19a5c43c55a6 Merge pull request #4063 from pgjones/bp-fix
+6fbdeb80c76b8a698ab366d21ccd786731b17361 Fix nested blueprint url_prefix
+f64fff64762c96b4ec1752f9a4e261fdc2ba4e33 Merge pull request #4057 from rafaVls/unused-escape-import
+9c186ccfe8fa4156123e9252a6e8a9cc68bfecab Use escape function in return statement for username and subpath.
+6e0fb117171ff3e57cf536952991f9ce01d130a5 Merge pull request #4056 from pallets/converter-session
 9039534eee6a87da98a1dee9e4338d1b73e861f8 Merge pull request #4055 from pallets/converter-session
 a7b02b3a07ae292ce376df2459eae3ffb4c06d52 converters have access to session
 636f195bb538864053bd0cc8b37844818a1fcd3d Merge branch '2.0.x'
@@ -3744,4 +3782,3 @@ d29a9765a5b7014d3a52272f80ee90f4d98cf799 HEAD is 0.4dev
 ce6e4cbd73d57cb8c1bba85c46490f71061f865f 0.5 is 0.3 now, why skip numbers?
 dfecc86dd315586bec8f5f0838195d03ba7165d3 Ported examples over to new config. documented upgrading
 02b916d509422a4703df5110110686288666d3d5 Added appfactory pattern
-182ee31503ea8a9eefd0d7063bd7fbdde991e13b Added chapter about config
