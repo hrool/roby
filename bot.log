@@ -3779,6 +3779,3 @@ dba42ae968a1cfa6cc6a3ead99ded554a710f041 Added missing message
 6913dc173303de9534c32d716c22b7f371ab6303 Added missing changelog entry
 4ca1d0a2ed7639d3f1d2e466a777f7e6b0e8aa0a update setup.py
 d29a9765a5b7014d3a52272f80ee90f4d98cf799 HEAD is 0.4dev
-ce6e4cbd73d57cb8c1bba85c46490f71061f865f 0.5 is 0.3 now, why skip numbers?
-dfecc86dd315586bec8f5f0838195d03ba7165d3 Ported examples over to new config. documented upgrading
-02b916d509422a4703df5110110686288666d3d5 Added appfactory pattern
