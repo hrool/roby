@@ -8,6 +8,13 @@ Version 0.4
 
 Release date to be announced, codename to be selected.
 
+Version 0.3.1
+-------------
+
+Bugfix release, released May 28th
+
+- fixed a error reporting bug with :meth:`flask.Config.from_envvar`
+
 Version 0.3
 -----------
 
@@ -22,6 +29,7 @@ Released on May 28th, codename Schnaps
   the with statement for playing in the console.
 - the request context is now available within the with statement making
   it possible to further push the request context or pop it.
+- added support for configurations.
 
 Version 0.2
 -----------
