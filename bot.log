@@ -1,3 +1,9 @@
+6f5870a791a91b726272413c5e2c563a6b2a9c2f Merge remote-tracking branch 'upstream/2.0.x'
+8e589daaf2cec6a10262b8ff88801127f2fa14fd Fix typing of jinja decorators (#4109)
+a960236117442bec67f89c30dfa014e05483da5a Fix type annotation for `before_request` and `before_app_request` decorators
+f7adb2c813c5c10dcab5bc81ee173a6f9fbd406a improve typing for `teardown_request`
+d81aa70106877b38673275e4539ab1f3232c4fea Merge pull request #4100 from greyli/fix-typo
+aa6fbf2f5a6265dd0ecaaca03e646c3c2a8f58d2 Fix typo in docs/tutorial/index.rst
 7161776824734fc2797fe2b4fc974d183487ebf8 Merge branch '2.0.x'
 e22021d531499af87f65d75f1e37e6329e7385ed start version 2.0.2.dev0
 bc90801c2ada42d3cf112a3b5701bfdbb8b6211c Merge pull request #4091 from pallets/release-2.0.1
@@ -3775,6 +3781,3 @@ a224fecfd57a77c3f7279102dcc0b332a6858065 More typo fixes.
 63caf6e15882292832485372cd86b8265a007f92 Fix some typos.
 8e4bcaf57630b5449999594063ffe8dc104e316a Fixed build process
 dba42ae968a1cfa6cc6a3ead99ded554a710f041 Added missing message
-9959ddd3da09f619d467891b194389851cf50367 Removed some unused code
-6913dc173303de9534c32d716c22b7f371ab6303 Added missing changelog entry
-4ca1d0a2ed7639d3f1d2e466a777f7e6b0e8aa0a update setup.py
