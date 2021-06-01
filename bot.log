@@ -1,3 +1,5 @@
+cd0086bc4b6fc4720b921b85eb9050c681ca601b Merge pull request #4121 from pallets/dependabot/pip/pre-commit-2.13.0
+5d0104f67e6e465e5416803062ed53add1e8d333 Bump pre-commit from 2.12.1 to 2.13.0
 6f5870a791a91b726272413c5e2c563a6b2a9c2f Merge remote-tracking branch 'upstream/2.0.x'
 8e589daaf2cec6a10262b8ff88801127f2fa14fd Fix typing of jinja decorators (#4109)
 a960236117442bec67f89c30dfa014e05483da5a Fix type annotation for `before_request` and `before_app_request` decorators
@@ -3780,4 +3782,3 @@ a6617f44c0416c6877d930b312e1f64df08eca0e Documented _request_ctx_stack. This fix
 a224fecfd57a77c3f7279102dcc0b332a6858065 More typo fixes.
 63caf6e15882292832485372cd86b8265a007f92 Fix some typos.
 8e4bcaf57630b5449999594063ffe8dc104e316a Fixed build process
-dba42ae968a1cfa6cc6a3ead99ded554a710f041 Added missing message
