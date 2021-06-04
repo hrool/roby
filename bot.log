@@ -1,3 +1,5 @@
+aac67289e517bda4ef488819edab74539ef8e9b9 Merge pull request #4122 from pallets/dependabot/pip/requirements/urllib3-1.26.5
+1b10e085d821e37b7f7162307046649a721e5587 Bump urllib3 from 1.26.4 to 1.26.5 in /requirements
 cd0086bc4b6fc4720b921b85eb9050c681ca601b Merge pull request #4121 from pallets/dependabot/pip/pre-commit-2.13.0
 5d0104f67e6e465e5416803062ed53add1e8d333 Bump pre-commit from 2.12.1 to 2.13.0
 6f5870a791a91b726272413c5e2c563a6b2a9c2f Merge remote-tracking branch 'upstream/2.0.x'
@@ -3779,6 +3781,3 @@ ee69fb58906818f50a2afe71e4ecde7af96b791a Added document about extension developm
 707b30749daf407c07b5b265bd892564576ad80a use setup.py test. This fixes #56
 a6617f44c0416c6877d930b312e1f64df08eca0e Documented _request_ctx_stack. This fixes #57
 50bca8c2d34b4b31ffcc98f6ced44b18de3c78b0 Updated AUTHORS file and added missing versionadded
-a224fecfd57a77c3f7279102dcc0b332a6858065 More typo fixes.
-63caf6e15882292832485372cd86b8265a007f92 Fix some typos.
-8e4bcaf57630b5449999594063ffe8dc104e316a Fixed build process
