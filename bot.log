@@ -3778,4 +3778,3 @@ bc00fd1e83f23f57dd6a765b6a4bab2394584ae6 Added support for deferred context clea
 33e7f2b990e3889d6aa9cffef4a4c9d7d0923698 Invoke after_request on exceptions as well. This fixes #59
 216472b43dbb2c2501ab7f8b3e5ae861a082db3f Fix missing plural in documentation
 ee69fb58906818f50a2afe71e4ecde7af96b791a Added document about extension development
-707b30749daf407c07b5b265bd892564576ad80a use setup.py test. This fixes #56
