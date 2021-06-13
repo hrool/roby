@@ -3776,5 +3776,3 @@ f904ef27d3d1f4e03972c34858787294c74c164f Fixing typo in error handling documenta
 bc00fd1e83f23f57dd6a765b6a4bab2394584ae6 Added support for deferred context cleanup. test_client users can now access the context locals after the actual request if the client is used with a with-block. This fixes #59.
 937360877bd425543e06decd68a62e086b78bf6b Documented changes in after_request handlers.
 33e7f2b990e3889d6aa9cffef4a4c9d7d0923698 Invoke after_request on exceptions as well. This fixes #59
-216472b43dbb2c2501ab7f8b3e5ae861a082db3f Fix missing plural in documentation
-ee69fb58906818f50a2afe71e4ecde7af96b791a Added document about extension development
