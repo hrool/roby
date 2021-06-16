@@ -3774,5 +3774,3 @@ f904ef27d3d1f4e03972c34858787294c74c164f Fixing typo in error handling documenta
 1ffa295d933c7e0cd1ee14c1592c40f72b9f22bb Added message that setup.py develop is required to build the docs
 9983e847425621b5e474ae9da6822f1af0b0cc1f Fixed after_request handlers being called twice in some cases and improved logging system
 bc00fd1e83f23f57dd6a765b6a4bab2394584ae6 Added support for deferred context cleanup. test_client users can now access the context locals after the actual request if the client is used with a with-block. This fixes #59.
-937360877bd425543e06decd68a62e086b78bf6b Documented changes in after_request handlers.
-33e7f2b990e3889d6aa9cffef4a4c9d7d0923698 Invoke after_request on exceptions as well. This fixes #59
